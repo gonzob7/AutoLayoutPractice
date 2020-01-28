@@ -15,6 +15,7 @@
 		E06956A623D776BF0001F903 /* ContraintsPractice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E06956A423D776BF0001F903 /* ContraintsPractice.xcdatamodeld */; };
 		E06956A823D776C10001F903 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E06956A723D776C10001F903 /* Assets.xcassets */; };
 		E06956AB23D776C10001F903 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E06956A923D776C10001F903 /* LaunchScreen.storyboard */; };
+		E0CA772123E0BBEF00AE4955 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CA772023E0BBEF00AE4955 /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E06956A723D776C10001F903 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E06956AA23D776C10001F903 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E06956AC23D776C10001F903 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0CA772023E0BBEF00AE4955 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,6 @@
 				3A6BE21E05784854CB057431 /* Pods-ContraintsPractice.debug.xcconfig */,
 				8E5DDA8F90EEAA36A244610F /* Pods-ContraintsPractice.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -86,6 +87,7 @@
 				E069569B23D776BF0001F903 /* AppDelegate.swift */,
 				E069569D23D776BF0001F903 /* SceneDelegate.swift */,
 				E069569F23D776BF0001F903 /* ViewController.swift */,
+				E0CA772023E0BBEF00AE4955 /* OnboardingViewController.swift */,
 				E06956A123D776BF0001F903 /* Main.storyboard */,
 				E06956A723D776C10001F903 /* Assets.xcassets */,
 				E06956A923D776C10001F903 /* LaunchScreen.storyboard */,
@@ -194,6 +196,7 @@
 			files = (
 				E06956A023D776BF0001F903 /* ViewController.swift in Sources */,
 				E069569C23D776BF0001F903 /* AppDelegate.swift in Sources */,
+				E0CA772123E0BBEF00AE4955 /* OnboardingViewController.swift in Sources */,
 				E069569E23D776BF0001F903 /* SceneDelegate.swift in Sources */,
 				E06956A623D776BF0001F903 /* ContraintsPractice.xcdatamodeld in Sources */,
 			);
