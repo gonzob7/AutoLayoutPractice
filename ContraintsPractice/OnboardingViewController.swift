@@ -11,7 +11,6 @@ import UIKit
 class OnboardingViewController: UIViewController{
     
     
-    var currentPage = 1
     let firstView: UIView = CustomView(color: .orange)
     let secondView: UIView = CustomView(color: .green)
     let thirdView: UIView = CustomView(color: .yellow)
@@ -33,6 +32,14 @@ class OnboardingViewController: UIViewController{
         container.translatesAutoresizingMaskIntoConstraints = false
         container.distribution = .fillEqually
         return container
+    }()
+    
+    let pageControl: UIPageControl = {
+        let pageControl = UIPageControl()
+        pageControl.currentPage = 0
+        pageControl.isUserInteractionEnabled = false
+        pageControl.translatesAutoresizingMaskIntoConstraints = false
+        return pageControl
     }()
     
                view.addSubview(scrollView)
