@@ -10,6 +10,8 @@ import UIKit
 
 class OnboardingViewController: UIViewController, UIScrollViewDelegate{
     
+    
+    var currentPage = 1
     var scrollView: UIScrollView!
     var container: UIStackView!
     let firstView: UIView = UIView()
@@ -62,6 +64,11 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate{
         self.secondView.backgroundColor = .blue
         self.thirdView.backgroundColor = .systemPink
 //        self.pageControl.numberOfPages = 3
+        
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
     }
 
 }
