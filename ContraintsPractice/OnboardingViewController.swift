@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OnboardingViewController: UIViewController{
+class OnboardingViewController: UIViewController, UIScrollViewDelegate{
     
     
     let firstView: UIView = CustomView(color: .orange)
@@ -41,41 +41,36 @@ class OnboardingViewController: UIViewController{
         pageControl.translatesAutoresizingMaskIntoConstraints = false
         return pageControl
     }()
-    
-               view.addSubview(scrollView)
-
-               
-               
-               
-               scrollView.addSubview(container)
-               container.addArrangedSubview(firstView)
-               container.addArrangedSubview(secondView)
-               container.addArrangedSubview(thirdView)
-               
-               scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-               scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-               scrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-               scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-               
-               container.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
-               container.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
-               container.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
-               container.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
-               container.heightAnchor.constraint(equalTo: scrollView.heightAnchor).isActive = true
-               
-               firstView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
-               secondView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
-               thirdView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.pageControl.numberOfPages = 3
-        
+        setViews()
     }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    func setViews(){
+        scrollView.delegate = self
+        view.addSubview(scrollView)
+        scrollView.addSubview(container)
         
+        scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        scrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        
+        container.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
+        container.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
+        container.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
+        container.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
+        container.heightAnchor.constraint(equalTo: scrollView.heightAnchor).isActive = true
+        
+        container.addArrangedSubview(firstView)
+        container.addArrangedSubview(secondView)
+        container.addArrangedSubview(thirdView)
+        
+        firstView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
+        secondView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
+        thirdView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
     }
 
 }
