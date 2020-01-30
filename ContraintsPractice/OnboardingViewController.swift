@@ -11,9 +11,9 @@ import UIKit
 class OnboardingViewController: UIViewController, UIScrollViewDelegate{
     
     
-    let firstView: UIView = CustomView(color: .orange)
-    let secondView: UIView = CustomView(color: .green)
-    let thirdView: UIView = CustomView(color: .yellow)
+    var firstView: CustomView!
+    var secondView: CustomView!
+    var thirdView: CustomView!
     var numOfPages: [CustomView] = []
     
     let scrollView: UIScrollView = {
@@ -45,7 +45,9 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setCustomViews()
         setViews()
+        setPageControl()
     }
     
     func setViews(){
@@ -64,13 +66,33 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate{
         container.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
         container.heightAnchor.constraint(equalTo: scrollView.heightAnchor).isActive = true
         
-        container.addArrangedSubview(firstView)
-        container.addArrangedSubview(secondView)
-        container.addArrangedSubview(thirdView)
-        
-        firstView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
-        secondView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
-        thirdView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
     }
+    
+    func setCustomViews(){
+        firstView = CustomView(color: .systemPink)
+        secondView = CustomView(color: .green)
+        thirdView = CustomView(color: .blue)
+        numOfPages = [firstView, secondView, thirdView]
+
+        for page in numOfPages{
+            container.addArrangedSubview(page)
+            page.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
+        }
+    }
+    
+    func setPageControl(){
+        pageControl.numberOfPages = numOfPages.count
+        view.addSubview(pageControl)
+        pageControl.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30).isActive = true
+        pageControl.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        pageControl.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
+        pageControl.currentPage = Int(pageNumber)
+    }
+    
 
 }
