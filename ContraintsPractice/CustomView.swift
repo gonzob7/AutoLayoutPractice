@@ -11,11 +11,37 @@ import UIKit
 class CustomView: UIView {
     
     var color: UIColor!
-
+    var image: UIImage!
+    var headerText: String!
+    var bodyText: String!
     
-    required init(color: UIColor) {
+    let stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = 20
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.distribution = .fill
+        return stackView
+    }()
+    
+    let imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
+    
+    
+    
+    
+    required init(color: UIColor, image: UIImage, headerText: String, bodyText: String) {
         super.init(frame: .zero)
         self.color = color
+        self.image = image
+        self.headerText = headerText
+        self.bodyText = bodyText
+        
         setup()
     }
     
@@ -29,10 +55,15 @@ class CustomView: UIView {
         super.init(coder: aDecoder)
         setup()
     }
+    
+    func createStackView(){
+        
+        
+    }
 
     func setup() {
         self.backgroundColor = color
-
+        createStackView()
     }
 
 }
