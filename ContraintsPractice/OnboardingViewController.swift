@@ -8,61 +8,50 @@
 
 import UIKit
 
-class OnboardingViewController: UIViewController{
+class OnboardingViewController: UIViewController, UIScrollViewDelegate{
     
-    var firstView: UIView!
-    var secondView: UIView!
-    var pageControl: UIPageControl!
     var scrollView: UIScrollView!
+    var container: UIStackView!
+    let firstView: UIView = UIView()
+    let secondView: UIView = UIView()
+    let thirdView: UIView = UIView()
     
     override func loadView() {
         super.loadView()
-        
-        firstView = UIView(frame: .zero)
-        firstView.translatesAutoresizingMaskIntoConstraints = false
-        
-        secondView = UIView(frame: .zero)
-        secondView.translatesAutoresizingMaskIntoConstraints = false
-        
-        pageControl = UIPageControl(frame: .zero)
-        pageControl.translatesAutoresizingMaskIntoConstraints = false
-        
-        scrollView = UIScrollView(frame: .zero)
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        
-        
-        
-        self.view.addSubview(scrollView)
-        self.scrollView.addSubview(firstView)
-        self.scrollView.addSubview(secondView)
-        self.scrollView.addSubview(pageControl)
-        
-        
-        NSLayoutConstraint.activate([
-            scrollView.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 3/1),
-            scrollView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 1/1),
-            scrollView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            scrollView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
-            
-            
-            firstView.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1/1),
-            firstView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 1/1),
-            firstView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            firstView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
-            
-            pageControl.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            pageControl.centerYAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
-            
-            
-            secondView.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1/1),
-            secondView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 1/1),
-            secondView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            secondView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
-            
-            pageControl.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            pageControl.centerYAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor)
-            
-        ])
+ 
+               
+               scrollView = UIScrollView()
+               scrollView.translatesAutoresizingMaskIntoConstraints = false
+               scrollView.isPagingEnabled = true
+               scrollView.showsHorizontalScrollIndicator = false
+               scrollView.delegate = self
+               view.addSubview(scrollView)
+               
+               container = UIStackView()
+               container.axis = .horizontal
+               container.spacing = 0
+               container.translatesAutoresizingMaskIntoConstraints = false
+               container.distribution = .fillEqually
+               
+               scrollView.addSubview(container)
+               container.addArrangedSubview(firstView)
+               container.addArrangedSubview(secondView)
+               container.addArrangedSubview(thirdView)
+               
+               scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+               scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+               scrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+               scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+               
+               container.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
+               container.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
+               container.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
+               container.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
+               container.heightAnchor.constraint(equalTo: scrollView.heightAnchor).isActive = true
+               
+               firstView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
+               secondView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
+               thirdView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
 
         
     }
@@ -71,7 +60,8 @@ class OnboardingViewController: UIViewController{
         super.viewDidLoad()
         self.firstView.backgroundColor = .purple
         self.secondView.backgroundColor = .blue
-        self.pageControl.numberOfPages = 3
+        self.thirdView.backgroundColor = .systemPink
+//        self.pageControl.numberOfPages = 3
     }
 
 }
