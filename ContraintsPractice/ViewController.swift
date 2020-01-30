@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     var centerView: UIView!
     var rightView: UIView!
     var bottomView: UIView!
+    
 
     override func loadView() {
         super.loadView()

@@ -11,7 +11,7 @@ import UIKit
 class CustomView: UIView {
     
     var color: UIColor!
-    
+
     
     required init(color: UIColor) {
         super.init(frame: .zero)

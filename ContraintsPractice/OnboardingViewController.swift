@@ -8,32 +8,37 @@
 
 import UIKit
 
-class OnboardingViewController: UIViewController, UIScrollViewDelegate{
+class OnboardingViewController: UIViewController{
     
     
     var currentPage = 1
-    var scrollView: UIScrollView!
-    var container: UIStackView!
     let firstView: UIView = CustomView(color: .orange)
     let secondView: UIView = CustomView(color: .green)
     let thirdView: UIView = CustomView(color: .yellow)
+    var numOfPages: [CustomView] = []
     
-    override func loadView() {
-        super.loadView()
- 
-               
-               scrollView = UIScrollView()
-               scrollView.translatesAutoresizingMaskIntoConstraints = false
-               scrollView.isPagingEnabled = true
-               scrollView.showsHorizontalScrollIndicator = false
-               scrollView.delegate = self
+    let scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.isPagingEnabled = true
+        scrollView.showsHorizontalScrollIndicator = false
+        return scrollView
+    }()
+
+    
+    let container: UIStackView = {
+        let container = UIStackView()
+        container.axis = .horizontal
+        container.spacing = 0
+        container.translatesAutoresizingMaskIntoConstraints = false
+        container.distribution = .fillEqually
+        return container
+    }()
+    
                view.addSubview(scrollView)
+
                
-               container = UIStackView()
-               container.axis = .horizontal
-               container.spacing = 0
-               container.translatesAutoresizingMaskIntoConstraints = false
-               container.distribution = .fillEqually
+               
                
                scrollView.addSubview(container)
                container.addArrangedSubview(firstView)
@@ -55,8 +60,6 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate{
                secondView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
                thirdView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
 
-        
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
