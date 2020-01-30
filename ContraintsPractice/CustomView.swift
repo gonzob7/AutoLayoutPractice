@@ -31,8 +31,14 @@ class CustomView: UIView {
         return imageView
     }()
     
-    
-    
+    let headerLabel: UILabel = {
+        let headerLabel = UILabel()
+        headerLabel.textAlignment = .center
+        headerLabel.font = UIFont(name: "Futura Bold", size: 30)
+        headerLabel.textColor = .brown
+        return headerLabel
+        
+    }()
     
     
     required init(color: UIColor, image: UIImage, headerText: String, bodyText: String) {
