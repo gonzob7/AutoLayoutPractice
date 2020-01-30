@@ -34,10 +34,17 @@ class CustomView: UIView {
     let headerLabel: UILabel = {
         let headerLabel = UILabel()
         headerLabel.textAlignment = .center
-        headerLabel.font = UIFont(name: "Futura Bold", size: 30)
+        headerLabel.font = UIFont(name: "Helvetica Neue Bold", size: 30)
         headerLabel.textColor = .brown
         return headerLabel
-        
+    }()
+    
+    let bodyLabel: UILabel = {
+        let bodyLabel = UILabel()
+        bodyLabel.textAlignment = .center
+        bodyLabel.font = UIFont(name: "Helvetica Neue Light", size: 18)
+        bodyLabel.textColor = .brown
+        return bodyLabel
     }()
     
     
