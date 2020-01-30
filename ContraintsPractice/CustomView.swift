@@ -11,12 +11,11 @@ import UIKit
 class CustomView: UIView {
     
     var color: UIColor!
-    var radius: Int!
     
-    required init(color: UIColor, radius: Int) {
+    
+    required init(color: UIColor) {
         super.init(frame: .zero)
         self.color = color
-        self.radius = radius
         setup()
     }
     
@@ -33,7 +32,7 @@ class CustomView: UIView {
 
     func setup() {
         self.backgroundColor = color
-        self.layer.cornerRadius = CGFloat(radius)
+
     }
 
 }

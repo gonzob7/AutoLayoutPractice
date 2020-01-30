@@ -14,9 +14,9 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate{
     var currentPage = 1
     var scrollView: UIScrollView!
     var container: UIStackView!
-    let firstView: UIView = UIView()
-    let secondView: UIView = UIView()
-    let thirdView: UIView = UIView()
+    let firstView: UIView = CustomView(color: .orange)
+    let secondView: UIView = CustomView(color: .green)
+    let thirdView: UIView = CustomView(color: .yellow)
     
     override func loadView() {
         super.loadView()
@@ -60,9 +60,6 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.firstView.backgroundColor = .purple
-        self.secondView.backgroundColor = .blue
-        self.thirdView.backgroundColor = .systemPink
 //        self.pageControl.numberOfPages = 3
         
     }

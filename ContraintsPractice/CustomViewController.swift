@@ -13,10 +13,10 @@ class CustomViewController: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
 
-            let myView = CustomView(color: .orange, radius: 8)
+            let myView = CustomView(color: .orange)
             myView.translatesAutoresizingMaskIntoConstraints = false
             self.view.addSubview(myView)
-
+            
             myView.widthAnchor.constraint(equalToConstant: 100).isActive = true
             myView.heightAnchor.constraint(equalToConstant: 100).isActive = true
             myView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
