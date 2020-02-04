@@ -68,9 +68,9 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate{
     }
     
     func setCustomViews(){
-        firstView = CustomView(color: .yellow, image: UIImage(named: "coffee")!, headerText: "Coffee Monthly Crate!", bodyText: "Recieve a monthly box of different coffee beans from all over the world!")
-        secondView = CustomView(color: .green, image: UIImage(named: "coffee")!, headerText: "Coffee Monthly Crate!", bodyText: "Recieve a monthly box of different coffee beans from all over the world!")
-        thirdView = CustomView(color: .blue, image: UIImage(named: "coffee")!, headerText: "Coffee Monthly Crate!", bodyText: "Recieve a monthly box of different coffee beans from all over the world!")
+        firstView = CustomView(color: .white, image: UIImage(named: "coffee")!, headerText: "Coffee Monthly Crate!", bodyText: "Recieve a monthly box of different coffee beans from all over the world!")
+        secondView = CustomView(color: .white, image: UIImage(named: "coffee")!, headerText: "Coffee Monthly Crate!", bodyText: "Recieve a monthly box of different coffee beans from all over the world!")
+        thirdView = CustomView(color: .white, image: UIImage(named: "coffee")!, headerText: "Coffee Monthly Crate!", bodyText: "Recieve a monthly box of different coffee beans from all over the world!")
         numOfPages = [firstView, secondView, thirdView]
 
         for page in numOfPages{

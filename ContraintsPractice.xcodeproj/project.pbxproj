@@ -94,13 +94,9 @@
 				E069569B23D776BF0001F903 /* AppDelegate.swift */,
 				E069569D23D776BF0001F903 /* SceneDelegate.swift */,
 				E069569F23D776BF0001F903 /* ViewController.swift */,
-				E0CA772023E0BBEF00AE4955 /* OnboardingViewController.swift */,
 				E06956A123D776BF0001F903 /* Main.storyboard */,
-				E06956A723D776C10001F903 /* Assets.xcassets */,
 				E06956A923D776C10001F903 /* LaunchScreen.storyboard */,
-				E06956AC23D776C10001F903 /* Info.plist */,
 				E06956A423D776BF0001F903 /* ContraintsPractice.xcdatamodeld */,
-				E0CA772223E35D0500AE4955 /* CustomView.swift */,
 				E0CA772423E35D7A00AE4955 /* CustomViewController.swift */,
 			);
 			path = ContraintsPractice;
@@ -109,6 +105,8 @@
 		E0C8F4E123E9EDED00A4E06B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E06956A723D776C10001F903 /* Assets.xcassets */,
+				E06956AC23D776C10001F903 /* Info.plist */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -116,6 +114,7 @@
 		E0C8F4E223E9EDF800A4E06B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E0CA772023E0BBEF00AE4955 /* OnboardingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -123,6 +122,7 @@
 		E0C8F4E323E9EDFF00A4E06B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E0CA772223E35D0500AE4955 /* CustomView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
