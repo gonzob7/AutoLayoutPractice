@@ -48,6 +48,8 @@ class CustomView: UIView {
     }()
     
     
+    //Initializer for a screen
+    
     required init(color: UIColor, image: UIImage, headerText: String, bodyText: String) {
         super.init(frame: .zero)
         self.color = color
@@ -71,12 +73,33 @@ class CustomView: UIView {
     
     func createStackView(){
         
+        addSubview(stackView)
+        self.stackView.addSubview(headerLabel)
+        self.stackView.addSubview(bodyLabel)
+
+        stackView.widthAnchor.constraint(equalTo: self.layoutMarginsGuide.widthAnchor, multiplier: 0.65).isActive = true
+        stackView.heightAnchor.constraint(equalTo: self.layoutMarginsGuide.heightAnchor, multiplier: 0.50).isActive = true
+
+        stackView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        stackView .centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        
+        self.stackView.addArrangedSubview(imageView)
+
+        imageView.centerXAnchor.constraint(equalTo: stackView.centerXAnchor).isActive = true
+        imageView.centerYAnchor.constraint(equalTo: stackView.centerYAnchor).isActive = true
+        
+
+        imageView.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 0.60).isActive = true
+        imageView.topAnchor.constraint(equalTo: stackView.topAnchor, constant: 200).isActive = true
+        self.imageView.image = image
+        self.backgroundColor = color
+
         
     }
 
     func setup() {
-        self.backgroundColor = color
         createStackView()
+        
     }
 
 }

@@ -88,6 +88,9 @@
 		E069569A23D776BF0001F903 /* ContraintsPractice */ = {
 			isa = PBXGroup;
 			children = (
+				E0C8F4E123E9EDED00A4E06B /* Models */,
+				E0C8F4E323E9EDFF00A4E06B /* Views */,
+				E0C8F4E223E9EDF800A4E06B /* Controllers */,
 				E069569B23D776BF0001F903 /* AppDelegate.swift */,
 				E069569D23D776BF0001F903 /* SceneDelegate.swift */,
 				E069569F23D776BF0001F903 /* ViewController.swift */,
@@ -101,6 +104,27 @@
 				E0CA772423E35D7A00AE4955 /* CustomViewController.swift */,
 			);
 			path = ContraintsPractice;
+			sourceTree = "<group>";
+		};
+		E0C8F4E123E9EDED00A4E06B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E0C8F4E223E9EDF800A4E06B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E0C8F4E323E9EDFF00A4E06B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

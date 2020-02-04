@@ -65,13 +65,12 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate{
         container.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
         container.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
         container.heightAnchor.constraint(equalTo: scrollView.heightAnchor).isActive = true
-        
     }
     
     func setCustomViews(){
-        firstView = CustomView(color: .systemPink)
-        secondView = CustomView(color: .green)
-        thirdView = CustomView(color: .blue)
+        firstView = CustomView(color: .yellow, image: UIImage(named: "coffee")!, headerText: "Coffee Monthly Crate!", bodyText: "Recieve a monthly box of different coffee beans from all over the world!")
+        secondView = CustomView(color: .green, image: UIImage(named: "coffee")!, headerText: "Coffee Monthly Crate!", bodyText: "Recieve a monthly box of different coffee beans from all over the world!")
+        thirdView = CustomView(color: .blue, image: UIImage(named: "coffee")!, headerText: "Coffee Monthly Crate!", bodyText: "Recieve a monthly box of different coffee beans from all over the world!")
         numOfPages = [firstView, secondView, thirdView]
 
         for page in numOfPages{
