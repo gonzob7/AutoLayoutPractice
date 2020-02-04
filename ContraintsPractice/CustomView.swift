@@ -91,15 +91,23 @@ class CustomView: UIView {
 
         imageView.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 0.60).isActive = true
         imageView.topAnchor.constraint(equalTo: stackView.topAnchor, constant: 200).isActive = true
-        self.imageView.image = image
-        self.backgroundColor = color
-
         
     }
 
+    
+    func setColor(){
+        self.backgroundColor = color
+    }
+    
+    func setImage(){
+        self.imageView.image = image
+    }
+    
+    
     func setup() {
         createStackView()
-        
+        setColor()
+        setImage()
     }
 
 }
