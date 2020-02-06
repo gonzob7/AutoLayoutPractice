@@ -41,6 +41,7 @@ class CustomView: UIView {
     
     let bodyLabel: UILabel = {
         let bodyLabel = UILabel()
+        bodyLabel.numberOfLines = 2
         bodyLabel.textAlignment = .center
         bodyLabel.font = UIFont(name: "Helvetica Neue Light", size: 18)
         bodyLabel.textColor = .brown
@@ -74,8 +75,8 @@ class CustomView: UIView {
     func createStackView(){
         
         addSubview(stackView)
-        self.stackView.addSubview(headerLabel)
-        self.stackView.addSubview(bodyLabel)
+//        self.stackView.addSubview(headerLabel)
+        self.stackView.addArrangedSubview(bodyLabel)
 
         stackView.widthAnchor.constraint(equalTo: self.layoutMarginsGuide.widthAnchor, multiplier: 0.65).isActive = true
         stackView.heightAnchor.constraint(equalTo: self.layoutMarginsGuide.heightAnchor, multiplier: 0.50).isActive = true
@@ -92,6 +93,9 @@ class CustomView: UIView {
         imageView.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 0.60).isActive = true
         imageView.topAnchor.constraint(equalTo: stackView.topAnchor, constant: 200).isActive = true
         
+//        bodyLabel.heightAnchor.constraint(equalToConstant: 40.0)
+//        bodyLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 30).isActive = true
+                
     }
 
     

@@ -24,7 +24,6 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate{
         return scrollView
     }()
 
-    
     let container: UIStackView = {
         let container = UIStackView()
         container.axis = .horizontal
@@ -41,7 +40,6 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate{
         pageControl.translatesAutoresizingMaskIntoConstraints = false
         return pageControl
     }()
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,9 +66,11 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate{
     }
     
     func setCustomViews(){
-        firstView = CustomView(color: .white, image: UIImage(named: "coffee")!, headerText: "Coffee Monthly Crate!", bodyText: "Recieve a monthly box of different coffee beans from all over the world!")
-        secondView = CustomView(color: .white, image: UIImage(named: "coffee")!, headerText: "Coffee Monthly Crate!", bodyText: "Recieve a monthly box of different coffee beans from all over the world!")
-        thirdView = CustomView(color: .white, image: UIImage(named: "coffee")!, headerText: "Coffee Monthly Crate!", bodyText: "Recieve a monthly box of different coffee beans from all over the world!")
+        firstView = CustomView(color: UIColor(red:0.44, green:0.31, blue:0.22, alpha:1.0), image: UIImage(named: "coffee")!, headerText: "Coffee Monthly Crate!", bodyText: "Recieve a monthly box of different coffee beans from all over the world!")
+        secondView = CustomView(color: UIColor(red:0.44, green:0.31, blue:0.22, alpha:1.0), image: UIImage(named: "coffee")!, headerText: "Coffee Monthly Crate!", bodyText: "Recieve a monthly box of different coffee beans from all over the world!")
+        thirdView = CustomView(color: UIColor(red:0.44, green:0.31, blue:0.22, alpha:1.0), image: UIImage(named: "coffee")!, headerText: "Coffee Monthly Crate!", bodyText: "Recieve a monthly box of different coffee beans from all over the world!")
+        
+        
         numOfPages = [firstView, secondView, thirdView]
 
         for page in numOfPages{
