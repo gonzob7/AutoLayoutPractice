@@ -55,7 +55,7 @@ class CustomView: UIView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Continue", for: .normal)
-        button.addTarget(self, action: #selector(continueButtonTapped), for: .touchUpInside)
+        button.backgroundColor = .black
         button.isUserInteractionEnabled = true
         return button
         
@@ -90,7 +90,7 @@ class CustomView: UIView {
         addSubview(stackView)
 //        self.stackView.addSubview(headerLabel)
         
-
+        stackView.distribution = .fill
         stackView.widthAnchor.constraint(equalTo: self.layoutMarginsGuide.widthAnchor, multiplier: 0.65).isActive = true
         stackView.heightAnchor.constraint(equalTo: self.layoutMarginsGuide.heightAnchor, multiplier: 0.50).isActive = true
 
@@ -103,28 +103,22 @@ class CustomView: UIView {
 
         imageView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor).isActive = true
         imageView.leadingAnchor.constraint(equalTo: stackView.leadingAnchor).isActive = true
-        imageView.bottomAnchor.constraint(equalTo: stackView.bottomAnchor).isActive = true
         imageView.topAnchor.constraint(equalTo: stackView.topAnchor, constant: 50).isActive = true
-        
-        
         
         bodyLabel.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
         
         stackView.addArrangedSubview(continueButton)
-
-        continueButton.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
+        
+        continueButton.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
+        continueButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         continueButton.isHidden = true
         if isLastPage {
             continueButton.isHidden = false
         }
-        
-        
-        
-        
     }
-
     
+
     func setColor(){
         self.backgroundColor = color
     }
@@ -136,12 +130,6 @@ class CustomView: UIView {
     func setBody(){
         self.bodyLabel.text = bodyText
     }
-    
-    @objc func continueButtonTapped(){
-        print("continue")
-        self.isHidden = true
-    }
-    
     
     
     
