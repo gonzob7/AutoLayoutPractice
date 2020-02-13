@@ -10,15 +10,18 @@ import UIKit
 
 class CustomView: UIView {
     
+    var isLastPage: Bool!
     var color: UIColor!
     var image: UIImage!
     var headerText: String!
     var bodyText: String!
+//    var continueButton: UIButton!
+    
     
     let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = 20
+        stackView.spacing = 0
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.distribution = .fill
         return stackView
@@ -41,23 +44,33 @@ class CustomView: UIView {
     
     let bodyLabel: UILabel = {
         let bodyLabel = UILabel()
-        bodyLabel.numberOfLines = 2
+        bodyLabel.numberOfLines = 1
         bodyLabel.textAlignment = .center
         bodyLabel.font = UIFont(name: "Helvetica Neue Light", size: 18)
-        bodyLabel.textColor = .brown
+        bodyLabel.textColor = .black
         return bodyLabel
+    }()
+    
+    let continueButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Continue", for: .normal)
+        button.addTarget(self, action: #selector(continueButtonTapped), for: .touchUpInside)
+        button.isUserInteractionEnabled = true
+        return button
+        
     }()
     
     
     //Initializer for a screen
     
-    required init(color: UIColor, image: UIImage, headerText: String, bodyText: String) {
+    required init(color: UIColor, image: UIImage, headerText: String, bodyText: String, isLastPage: Bool = false) {
         super.init(frame: .zero)
         self.color = color
         self.image = image
         self.headerText = headerText
         self.bodyText = bodyText
-        
+        self.isLastPage = isLastPage
         setup()
     }
     
@@ -76,7 +89,7 @@ class CustomView: UIView {
         
         addSubview(stackView)
 //        self.stackView.addSubview(headerLabel)
-        self.stackView.addArrangedSubview(bodyLabel)
+        
 
         stackView.widthAnchor.constraint(equalTo: self.layoutMarginsGuide.widthAnchor, multiplier: 0.65).isActive = true
         stackView.heightAnchor.constraint(equalTo: self.layoutMarginsGuide.heightAnchor, multiplier: 0.50).isActive = true
@@ -84,18 +97,31 @@ class CustomView: UIView {
         stackView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         stackView .centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         
+        self.stackView.addArrangedSubview(bodyLabel)
+
         self.stackView.addArrangedSubview(imageView)
 
-        imageView.centerXAnchor.constraint(equalTo: stackView.centerXAnchor).isActive = true
-        imageView.centerYAnchor.constraint(equalTo: stackView.centerYAnchor).isActive = true
+        imageView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor).isActive = true
+        imageView.leadingAnchor.constraint(equalTo: stackView.leadingAnchor).isActive = true
+        imageView.bottomAnchor.constraint(equalTo: stackView.bottomAnchor).isActive = true
+        imageView.topAnchor.constraint(equalTo: stackView.topAnchor, constant: 50).isActive = true
         
+        
+        
+        bodyLabel.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
+        
+        stackView.addArrangedSubview(continueButton)
 
-        imageView.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 0.60).isActive = true
-        imageView.topAnchor.constraint(equalTo: stackView.topAnchor, constant: 200).isActive = true
+        continueButton.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
         
-//        bodyLabel.heightAnchor.constraint(equalToConstant: 40.0)
-//        bodyLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 30).isActive = true
-                
+        continueButton.isHidden = true
+        if isLastPage {
+            continueButton.isHidden = false
+        }
+        
+        
+        
+        
     }
 
     
@@ -107,11 +133,25 @@ class CustomView: UIView {
         self.imageView.image = image
     }
     
+    func setBody(){
+        self.bodyLabel.text = bodyText
+    }
+    
+    @objc func continueButtonTapped(){
+        print("continue")
+        self.isHidden = true
+    }
+    
+    
+    
     
     func setup() {
+        
         createStackView()
         setColor()
         setImage()
+        setBody()
+        
     }
 
 }

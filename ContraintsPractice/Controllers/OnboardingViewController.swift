@@ -17,10 +17,12 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate{
     var numOfPages: [CustomView] = []
     
     let scrollView: UIScrollView = {
-        let scrollView = UIScrollView()
+        let scrollView: UIScrollView = UIScrollView(frame: .zero)
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.isPagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
+        scrollView.showsVerticalScrollIndicator = false
+        scrollView.contentSize.height = 1.0
         return scrollView
     }()
 
@@ -49,6 +51,7 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate{
     }
     
     func setViews(){
+        navigationController?.navigationBar.isHidden = true
         scrollView.delegate = self
         view.addSubview(scrollView)
         scrollView.addSubview(container)
@@ -68,7 +71,7 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate{
     func setCustomViews(){
         firstView = CustomView(color: UIColor(red:0.44, green:0.31, blue:0.22, alpha:1.0), image: UIImage(named: "coffee")!, headerText: "Coffee Monthly Crate!", bodyText: "Recieve a monthly box of different coffee beans from all over the world!")
         secondView = CustomView(color: UIColor(red:0.44, green:0.31, blue:0.22, alpha:1.0), image: UIImage(named: "coffee")!, headerText: "Coffee Monthly Crate!", bodyText: "Recieve a monthly box of different coffee beans from all over the world!")
-        thirdView = CustomView(color: UIColor(red:0.44, green:0.31, blue:0.22, alpha:1.0), image: UIImage(named: "coffee")!, headerText: "Coffee Monthly Crate!", bodyText: "Recieve a monthly box of different coffee beans from all over the world!")
+        thirdView = CustomView(color: UIColor(red:0.44, green:0.31, blue:0.22, alpha:1.0), image: UIImage(named: "coffee")!, headerText: "Coffee Monthly Crate!", bodyText: "Recieve a monthly box of different coffee beans from all over the world!", isLastPage: true)
         
         
         numOfPages = [firstView, secondView, thirdView]
@@ -85,13 +88,15 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate{
         pageControl.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30).isActive = true
         pageControl.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         pageControl.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
         pageControl.currentPage = Int(pageNumber)
+
     }
+    
+
     
 
 }
