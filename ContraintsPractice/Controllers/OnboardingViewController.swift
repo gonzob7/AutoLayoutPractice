@@ -72,7 +72,8 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate{
         firstView = CustomView(color: UIColor(red:0.44, green:0.31, blue:0.22, alpha:1.0), image: UIImage(named: "coffee")!, headerText: "Coffee Monthly Crate!", bodyText: "Recieve a monthly box of different coffee beans from all over the world!")
         secondView = CustomView(color: UIColor(red:0.44, green:0.31, blue:0.22, alpha:1.0), image: UIImage(named: "coffee")!, headerText: "Coffee Monthly Crate!", bodyText: "Recieve a monthly box of different coffee beans from all over the world!")
         thirdView = CustomView(color: UIColor(red:0.44, green:0.31, blue:0.22, alpha:1.0), image: UIImage(named: "coffee")!, headerText: "Coffee Monthly Crate!", bodyText: "Recieve a monthly box of different coffee beans from all over the world!", isLastPage: true)
-        
+        thirdView.continueButton.addTarget(self, action: #selector(continueButtonTapped), for: .touchUpInside)
+
         
         numOfPages = [firstView, secondView, thirdView]
 
@@ -81,6 +82,11 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate{
             page.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
         }
     }
+    
+    @objc func continueButtonTapped(){
+        print("continue")
+    }
+    
     
     func setPageControl(){
         pageControl.numberOfPages = numOfPages.count
@@ -94,6 +100,12 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate{
         let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
         pageControl.currentPage = Int(pageNumber)
 
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y > 0 || scrollView.contentOffset.y < 0 {
+         scrollView.contentOffset.y = 0 //disable vertical scrolling
+        }
     }
     
 
