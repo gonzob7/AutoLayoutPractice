@@ -44,10 +44,10 @@ class CustomView: UIView {
     
     let bodyLabel: UILabel = {
         let bodyLabel = UILabel()
-        bodyLabel.numberOfLines = 1
+        bodyLabel.numberOfLines = 2
         bodyLabel.textAlignment = .center
-        bodyLabel.font = UIFont(name: "Helvetica Neue Light", size: 18)
-        bodyLabel.textColor = .black
+        bodyLabel.font = UIFont(name: "AvenirNextCondensed-DemiBold", size: 20)
+        bodyLabel.textColor = UIColor(red:1.00, green:0.98, blue:0.99, alpha:1.0)
         return bodyLabel
     }()
     

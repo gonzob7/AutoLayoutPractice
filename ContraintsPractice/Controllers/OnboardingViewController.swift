@@ -69,7 +69,7 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate{
     }
     
     func setCustomViews(){
-        firstView = CustomView(color: UIColor(red:0.44, green:0.31, blue:0.22, alpha:1.0), image: UIImage(named: "coffee")!, headerText: "Coffee Monthly Crate!", bodyText: "Recieve a monthly box of different coffee beans from all over the world!")
+        firstView = CustomView(color: UIColor(red:1.00, green:0.59, blue:0.40, alpha:1.0), image: UIImage(named: "dog")!, headerText: "Coffee Monthly Crate!", bodyText: "Tell us about your pets personality")
         secondView = CustomView(color: UIColor(red:0.44, green:0.31, blue:0.22, alpha:1.0), image: UIImage(named: "coffee")!, headerText: "Coffee Monthly Crate!", bodyText: "Recieve a monthly box of different coffee beans from all over the world!")
         thirdView = CustomView(color: UIColor(red:0.44, green:0.31, blue:0.22, alpha:1.0), image: UIImage(named: "coffee")!, headerText: "Coffee Monthly Crate!", bodyText: "Recieve a monthly box of different coffee beans from all over the world!", isLastPage: true)
         thirdView.continueButton.addTarget(self, action: #selector(continueButtonTapped), for: .touchUpInside)
