@@ -86,6 +86,13 @@ class LoginViewController: UIViewController{
         passwordTextField.translatesAutoresizingMaskIntoConstraints = false
         return passwordTextField
     }()
+    
+    
+    
+    let box: UIImageView = {
+        let box = UIImageView(image: UIImage(named: "box"))
+        return box
+    }()
 
     
     //MARK: Lifecycle
@@ -109,7 +116,11 @@ class LoginViewController: UIViewController{
         
         logo.heightAnchor.constraint(equalToConstant: 100).isActive = true
         
+        
         logo.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
+        
+        stackView.addArrangedSubview(box)
+        box.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
         
         stackView.addArrangedSubview(usernameTextField)
         

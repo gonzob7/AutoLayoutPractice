@@ -61,8 +61,8 @@ class CustomView: UIView {
         button.backgroundColor = UIColor(red:0.97, green:0.97, blue:0.97, alpha:1.0)
         button.layer.cornerRadius = 10
         return button
-        
     }()
+
     
     
     //Initializer for a screen
