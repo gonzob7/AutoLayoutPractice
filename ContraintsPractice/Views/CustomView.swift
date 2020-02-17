@@ -44,10 +44,11 @@ class CustomView: UIView {
     
     let bodyLabel: UILabel = {
         let bodyLabel = UILabel()
-        bodyLabel.numberOfLines = 2
         bodyLabel.textAlignment = .center
         bodyLabel.font = UIFont(name: "AvenirNextCondensed-DemiBold", size: 20)
         bodyLabel.textColor = UIColor(red:1.00, green:0.98, blue:0.99, alpha:1.0)
+        bodyLabel.lineBreakMode = .byWordWrapping
+        bodyLabel.numberOfLines = 0
         return bodyLabel
     }()
     
@@ -55,8 +56,10 @@ class CustomView: UIView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Continue", for: .normal)
-        button.backgroundColor = .black
-        button.isUserInteractionEnabled = true
+        button.setTitleColor(.black, for: .normal)
+        button.titleLabel?.font = UIFont(name: "AvenirNextCondensed-DemiBold", size: 18)
+        button.backgroundColor = UIColor(red:0.97, green:0.97, blue:0.97, alpha:1.0)
+        button.layer.cornerRadius = 10
         return button
         
     }()
