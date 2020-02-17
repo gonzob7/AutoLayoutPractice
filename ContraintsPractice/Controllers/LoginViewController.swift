@@ -136,5 +136,17 @@ class LoginViewController: UIViewController{
         
         loginBtn.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
         loginBtn.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        loginBtn.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        
     }
+    
+    
+    @objc func loginButtonTapped(){
+        print("logged in")
+//        let loginVC: LoginViewController = LoginViewController()
+//        self.navigationController?.pushViewController(loginVC, animated: true)
+    }
+    
+    
 }
