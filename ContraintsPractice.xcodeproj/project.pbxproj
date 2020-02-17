@@ -15,6 +15,7 @@
 		E06956AB23D776C10001F903 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E06956A923D776C10001F903 /* LaunchScreen.storyboard */; };
 		E074BF4223F51CD900334F8F /* UINavigationController+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E074BF4123F51CD900334F8F /* UINavigationController+extensions.swift */; };
 		E074BF4423FB305500334F8F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E074BF4323FB305500334F8F /* LoginViewController.swift */; };
+		E074BF4623FB519300334F8F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E074BF4523FB519200334F8F /* HomeViewController.swift */; };
 		E0CA772123E0BBEF00AE4955 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CA772023E0BBEF00AE4955 /* OnboardingViewController.swift */; };
 		E0CA772323E35D0500AE4955 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CA772223E35D0500AE4955 /* CustomView.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		E06956AC23D776C10001F903 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E074BF4123F51CD900334F8F /* UINavigationController+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+extensions.swift"; sourceTree = "<group>"; };
 		E074BF4323FB305500334F8F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E074BF4523FB519200334F8F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E0CA772023E0BBEF00AE4955 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		E0CA772223E35D0500AE4955 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +114,7 @@
 			children = (
 				E0CA772023E0BBEF00AE4955 /* OnboardingViewController.swift */,
 				E074BF4323FB305500334F8F /* LoginViewController.swift */,
+				E074BF4523FB519200334F8F /* HomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				E074BF4423FB305500334F8F /* LoginViewController.swift in Sources */,
 				E069569C23D776BF0001F903 /* AppDelegate.swift in Sources */,
 				E0CA772123E0BBEF00AE4955 /* OnboardingViewController.swift in Sources */,
+				E074BF4623FB519300334F8F /* HomeViewController.swift in Sources */,
 				E0CA772323E35D0500AE4955 /* CustomView.swift in Sources */,
 				E074BF4223F51CD900334F8F /* UINavigationController+extensions.swift in Sources */,
 				E069569E23D776BF0001F903 /* SceneDelegate.swift in Sources */,
