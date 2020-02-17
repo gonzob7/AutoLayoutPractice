@@ -67,5 +67,10 @@ class LoginViewController: UIViewController{
         stackView.addArrangedSubview(logo)
         
         logo.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
+        
+        stackView.addArrangedSubview(loginBtn)
+        
+        loginBtn.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
+        loginBtn.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
 }
