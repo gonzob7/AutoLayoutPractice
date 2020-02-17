@@ -45,6 +45,47 @@ class LoginViewController: UIViewController{
         button.layer.cornerRadius = 10
         return button
     }()
+    
+    let usernameTextField: UITextField = {
+        let usernameTextField = UITextField()
+        let bottomLine = UIView()
+        usernameTextField.attributedPlaceholder = NSAttributedString(string: "Username",
+        attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        usernameTextField.font = UIFont(name: "AvenirNextCondensed-DemiBold", size: 18)
+        usernameTextField.textColor = .white
+        usernameTextField.borderStyle = .none
+        bottomLine.translatesAutoresizingMaskIntoConstraints = false
+        bottomLine.backgroundColor = .white
+        usernameTextField.addSubview(bottomLine)
+        bottomLine.topAnchor.constraint(equalTo: usernameTextField.bottomAnchor, constant: -8).isActive = true
+        bottomLine.leadingAnchor.constraint(equalTo: usernameTextField.leadingAnchor).isActive = true
+        bottomLine.trailingAnchor.constraint(equalTo: usernameTextField.trailingAnchor).isActive = true
+        bottomLine.heightAnchor.constraint(equalToConstant: 1.0).isActive = true
+
+        usernameTextField.translatesAutoresizingMaskIntoConstraints = false
+        return usernameTextField
+    }()
+    
+    let passwordTextField: UITextField = {
+        let passwordTextField = UITextField()
+        let bottomLine = UIView()
+        passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password",
+        attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        passwordTextField.isSecureTextEntry = true
+        passwordTextField.font = UIFont(name: "AvenirNextCondensed-DemiBold", size: 18)
+        passwordTextField.textColor = .white
+        passwordTextField.borderStyle = .none
+        bottomLine.translatesAutoresizingMaskIntoConstraints = false
+        bottomLine.backgroundColor = .white
+        passwordTextField.addSubview(bottomLine)
+        bottomLine.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: -8).isActive = true
+        bottomLine.leadingAnchor.constraint(equalTo: passwordTextField.leadingAnchor).isActive = true
+        bottomLine.trailingAnchor.constraint(equalTo: passwordTextField.trailingAnchor).isActive = true
+        bottomLine.heightAnchor.constraint(equalToConstant: 1.0).isActive = true
+
+        passwordTextField.translatesAutoresizingMaskIntoConstraints = false
+        return passwordTextField
+    }()
 
     
     //MARK: Lifecycle
@@ -66,7 +107,18 @@ class LoginViewController: UIViewController{
         
         stackView.addArrangedSubview(logo)
         
+        logo.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        
         logo.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
+        
+        stackView.addArrangedSubview(usernameTextField)
+        
+        usernameTextField.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
+        usernameTextField.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        stackView.addArrangedSubview(passwordTextField)
+        passwordTextField.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
+        passwordTextField.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         stackView.addArrangedSubview(loginBtn)
         
