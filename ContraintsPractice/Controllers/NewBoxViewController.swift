@@ -72,6 +72,30 @@ extension NewBoxViewController: UICollectionViewDelegateFlowLayout, UICollection
         return cell
     }
     
+//    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+//        if let cell = collectionView.cellForItem(at: indexPath) {
+//            cell.layer.cornerRadius = 10
+//            cell.backgroundColor = UIColor(red:0.44, green:0.43, blue:0.98, alpha:1.0)
+//        }
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+//        if let cell = collectionView.cellForItem(at: indexPath) {
+//            cell.contentView.backgroundColor = .black
+//        }
+//    }
     
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? CustomCell {
+            
+            if cell.backgroundColor == UIColor(red:0.59, green:0.59, blue:0.59, alpha:1.0){
+                cell.backgroundColor = UIColor(red:0.44, green:0.43, blue:0.98, alpha:1.0)
+            }else{
+                cell.backgroundColor = UIColor(red:0.59, green:0.59, blue:0.59, alpha:1.0)
+            }
+            
+        }
+    }
     
 }
