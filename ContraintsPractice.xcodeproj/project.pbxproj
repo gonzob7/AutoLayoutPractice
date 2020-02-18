@@ -19,6 +19,7 @@
 		E074BF4823FB6B9900334F8F /* NewBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E074BF4723FB6B9900334F8F /* NewBoxViewController.swift */; };
 		E074BF4A23FB86A700334F8F /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E074BF4923FB86A700334F8F /* CustomCell.swift */; };
 		E074BF4C23FB937600334F8F /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E074BF4B23FB937600334F8F /* Cell.swift */; };
+		E074BF4E23FC682400334F8F /* PastBoxesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E074BF4D23FC682400334F8F /* PastBoxesViewController.swift */; };
 		E0CA772123E0BBEF00AE4955 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CA772023E0BBEF00AE4955 /* OnboardingViewController.swift */; };
 		E0CA772323E35D0500AE4955 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CA772223E35D0500AE4955 /* CustomView.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		E074BF4723FB6B9900334F8F /* NewBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBoxViewController.swift; sourceTree = "<group>"; };
 		E074BF4923FB86A700334F8F /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		E074BF4B23FB937600334F8F /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		E074BF4D23FC682400334F8F /* PastBoxesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastBoxesViewController.swift; sourceTree = "<group>"; };
 		E0CA772023E0BBEF00AE4955 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		E0CA772223E35D0500AE4955 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +125,7 @@
 				E074BF4323FB305500334F8F /* LoginViewController.swift */,
 				E074BF4523FB519200334F8F /* HomeViewController.swift */,
 				E074BF4723FB6B9900334F8F /* NewBoxViewController.swift */,
+				E074BF4D23FC682400334F8F /* PastBoxesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				E074BF4623FB519300334F8F /* HomeViewController.swift in Sources */,
 				E0CA772323E35D0500AE4955 /* CustomView.swift in Sources */,
 				E074BF4223F51CD900334F8F /* UINavigationController+extensions.swift in Sources */,
+				E074BF4E23FC682400334F8F /* PastBoxesViewController.swift in Sources */,
 				E074BF4C23FB937600334F8F /* Cell.swift in Sources */,
 				E069569E23D776BF0001F903 /* SceneDelegate.swift in Sources */,
 				E06956A623D776BF0001F903 /* ContraintsPractice.xcdatamodeld in Sources */,

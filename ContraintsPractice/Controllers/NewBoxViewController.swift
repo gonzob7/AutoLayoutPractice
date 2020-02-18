@@ -94,7 +94,6 @@ extension NewBoxViewController: UICollectionViewDelegateFlowLayout, UICollection
             }else{
                 cell.backgroundColor = UIColor(red:0.59, green:0.59, blue:0.59, alpha:1.0)
             }
-            
         }
     }
     

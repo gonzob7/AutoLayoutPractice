@@ -96,12 +96,21 @@ class HomeViewController: UIViewController{
         
         newBox.addTarget(self, action: #selector(newBoxButtonTapped), for: .touchUpInside)
         
+        pastBoxes.addTarget(self, action: #selector(pastBoxesButtonTapped), for: .touchUpInside)
+        
     }
     
     @objc func newBoxButtonTapped(){
         let newBoxVC: NewBoxViewController = NewBoxViewController()
         self.navigationController?.pushViewController(newBoxVC, animated: true)
     }
+    
+    
+    @objc func pastBoxesButtonTapped(){
+        let pastBoxesVC: PastBoxesViewController = PastBoxesViewController()
+        self.navigationController?.pushViewController(pastBoxesVC, animated: true)
+    }
+
     
     
     
