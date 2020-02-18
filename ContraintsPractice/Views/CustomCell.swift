@@ -21,7 +21,7 @@ class CustomCell: UICollectionViewCell{
     let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = 10
+        stackView.spacing = 20
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.distribution = .fill
         return stackView
@@ -38,7 +38,7 @@ class CustomCell: UICollectionViewCell{
         let title = UILabel()
         title.translatesAutoresizingMaskIntoConstraints = false
         title.textColor = .white
-        title.font = UIFont(name: "AvenirNextCondensed-Bold", size: 15)
+        title.font = UIFont(name: "AvenirNextCondensed-Bold", size: 20)
         title.textAlignment = .center
         title.text = "testtt"
         return title
@@ -51,17 +51,13 @@ class CustomCell: UICollectionViewCell{
         stackView.heightAnchor.constraint(equalTo:  contentView.heightAnchor, multiplier: 0.70).isActive = true
         stackView.centerXAnchor.constraint(equalTo:  contentView.centerXAnchor).isActive = true
         stackView.centerYAnchor.constraint(equalTo:  contentView.centerYAnchor).isActive = true
+
         
         stackView.addArrangedSubview(image)
-        
-//        image.widthAnchor.constraint(equalTo: stackView.widthAnchor, multiplier: 0.65).isActive = true
         image.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 0.75).isActive = true
-//        image.centerXAnchor.constraint(equalTo: stackView.centerXAnchor).isActive = true
-//        image.centerYAnchor.constraint(equalTo: stackView.centerYAnchor).isActive = true
+
         
         stackView.addArrangedSubview(title)
-//        title.heightAnchor.constraint(equalToConstant: 20).isActive = true
-//        title.widthAnchor.constraint(equalTo: contentView.widthAnchor, constant: 0.65).isActive = true
     }
     
     required init?(coder: NSCoder) {
