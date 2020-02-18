@@ -83,20 +83,25 @@ class HomeViewController: UIViewController{
         stackView.addArrangedSubview(newBox)
         
         newBox.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
-        newBox.heightAnchor.constraint(equalToConstant: 100).isActive = true
         
         
         stackView.addArrangedSubview(pastBoxes)
         
         pastBoxes.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
-        pastBoxes.heightAnchor.constraint(equalToConstant: 100).isActive = true
         
         
         stackView.addArrangedSubview(profileBox)
         
         profileBox.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
-        profileBox.heightAnchor.constraint(equalToConstant: 100).isActive = true
         
+        newBox.addTarget(self, action: #selector(newBoxButtonTapped), for: .touchUpInside)
+        
+    }
+    
+    @objc func newBoxButtonTapped(){
+        print("new box")
+//        let newBoxVC: HomeViewController = HomeViewController()
+//        self.navigationController?.pushViewController(newBoxVC, animated: true)
     }
 
 }
