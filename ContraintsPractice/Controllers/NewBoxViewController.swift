@@ -14,7 +14,12 @@ class NewBoxViewController: UIViewController{
         
         Cell(title: "Treats", image: UIImage(named: "treat")!),
         Cell(title: "Toys", image: UIImage(named: "toy")!),
-        Cell(title: "Food", image: UIImage(named: "food")!)
+        Cell(title: "Food", image: UIImage(named: "food")!),
+        Cell(title: "Grooming", image: UIImage(named: "grooming")!),
+        Cell(title: "Lifestyle", image: UIImage(named: "lifestyle")!),
+        Cell(title: "Vaccines", image: UIImage(named: "vaccines")!),
+        Cell(title: "Accessories", image: UIImage(named: "accessories")!),
+        Cell(title: "Housing", image: UIImage(named: "housing")!)
     
     ]
     
