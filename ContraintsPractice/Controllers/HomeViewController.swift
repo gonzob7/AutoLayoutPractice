@@ -110,9 +110,5 @@ class HomeViewController: UIViewController{
         let pastBoxesVC: PastBoxesViewController = PastBoxesViewController()
         self.navigationController?.pushViewController(pastBoxesVC, animated: true)
     }
-
     
-    
-    
-
 }
