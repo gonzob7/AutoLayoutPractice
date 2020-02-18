@@ -17,6 +17,7 @@
 		E074BF4423FB305500334F8F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E074BF4323FB305500334F8F /* LoginViewController.swift */; };
 		E074BF4623FB519300334F8F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E074BF4523FB519200334F8F /* HomeViewController.swift */; };
 		E074BF4823FB6B9900334F8F /* NewBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E074BF4723FB6B9900334F8F /* NewBoxViewController.swift */; };
+		E074BF4A23FB86A700334F8F /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E074BF4923FB86A700334F8F /* CustomCell.swift */; };
 		E0CA772123E0BBEF00AE4955 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CA772023E0BBEF00AE4955 /* OnboardingViewController.swift */; };
 		E0CA772323E35D0500AE4955 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CA772223E35D0500AE4955 /* CustomView.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,7 @@
 		E074BF4323FB305500334F8F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E074BF4523FB519200334F8F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E074BF4723FB6B9900334F8F /* NewBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBoxViewController.swift; sourceTree = "<group>"; };
+		E074BF4923FB86A700334F8F /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		E0CA772023E0BBEF00AE4955 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		E0CA772223E35D0500AE4955 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				E0CA772223E35D0500AE4955 /* CustomView.swift */,
+				E074BF4923FB86A700334F8F /* CustomCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			files = (
 				E074BF4423FB305500334F8F /* LoginViewController.swift in Sources */,
 				E069569C23D776BF0001F903 /* AppDelegate.swift in Sources */,
+				E074BF4A23FB86A700334F8F /* CustomCell.swift in Sources */,
 				E0CA772123E0BBEF00AE4955 /* OnboardingViewController.swift in Sources */,
 				E074BF4823FB6B9900334F8F /* NewBoxViewController.swift in Sources */,
 				E074BF4623FB519300334F8F /* HomeViewController.swift in Sources */,
