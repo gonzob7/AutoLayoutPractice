@@ -10,6 +10,14 @@ import UIKit
 
 class CustomCell: UICollectionViewCell{
     
+    var data: Cell? {
+        didSet{
+            guard let data = data else { return }
+            image.image = data.image
+            title.text = data.title
+        }
+    }
+    
     let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -22,7 +30,7 @@ class CustomCell: UICollectionViewCell{
     let image: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.contentMode = .center
+        image.contentMode = .scaleAspectFit
         return image
     }()
     

@@ -12,9 +12,9 @@ class NewBoxViewController: UIViewController{
     
     let data = [
         
-        Cell(title: "Treats", image: UIImage(named: "jnf")!),
-        Cell(title: "Toys", image: UIImage(named: "fd")!),
-        Cell(title: "Food", image: UIImage(named: "df")!)
+        Cell(title: "Treats", image: UIImage(named: "treat")!),
+        Cell(title: "Toys", image: UIImage(named: "toy")!),
+        Cell(title: "Food", image: UIImage(named: "food")!)
     
     ]
     
@@ -56,13 +56,14 @@ extension NewBoxViewController: UICollectionViewDelegateFlowLayout, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        return data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CustomCell
         cell.backgroundColor = UIColor(red:0.59, green:0.59, blue:0.59, alpha:1.0)
         cell.layer.cornerRadius = 10
+        cell.data = self.data[indexPath.row]
         return cell
     }
     
