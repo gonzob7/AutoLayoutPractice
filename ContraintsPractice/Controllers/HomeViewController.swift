@@ -99,9 +99,11 @@ class HomeViewController: UIViewController{
     }
     
     @objc func newBoxButtonTapped(){
-        print("new box")
-//        let newBoxVC: HomeViewController = HomeViewController()
-//        self.navigationController?.pushViewController(newBoxVC, animated: true)
+        let newBoxVC: NewBoxViewController = NewBoxViewController()
+        self.navigationController?.pushViewController(newBoxVC, animated: true)
     }
+    
+    
+    
 
 }
