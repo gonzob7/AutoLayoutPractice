@@ -45,5 +45,23 @@ class PastBoxesViewController: UIViewController{
     }
     
     
+
     
+}
+
+
+extension PastBoxesViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//      return characters.count
+        return 30
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+      let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+//      cell.textLabel?.text = characters[indexPath.row]
+      return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100.0
+    }
 }
