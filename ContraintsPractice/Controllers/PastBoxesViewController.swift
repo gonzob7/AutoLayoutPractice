@@ -63,6 +63,7 @@ extension PastBoxesViewController: UITableViewDataSource {
       let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomPastBoxCell
         cell.setCellContents(box: boxesArray[indexPath.row])
         cell.accessoryType = .disclosureIndicator
+        cell.selectionStyle = .none
       return cell
     }
     
