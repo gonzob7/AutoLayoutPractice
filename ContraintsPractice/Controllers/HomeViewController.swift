@@ -8,64 +8,38 @@
 
 import UIKit
 
-class HomeViewController: UIViewController{
+class HomeViewController: UIViewController, UICollectionViewDelegate{
     
     
     var collectionView: UICollectionView!
-
     
+    lazy var sections: [Section] = [
+        TitleSection(headerTitle: "Featured Categories"),
+        FeaturedSection()
+        
+    ]
     
-    let stackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.spacing = 30
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.distribution = .fillEqually
-        return stackView
+    lazy var collectionViewLayout: UICollectionViewLayout = {
+        var sections = self.sections
+        let layout = UICollectionViewCompositionalLayout { (sectionIndex, environment) -> NSCollectionLayoutSection? in
+            return sections[sectionIndex].layoutSection()
+        }
+        return layout
     }()
     
-    let newBox: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("New Box", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = UIColor(red:0.44, green:0.43, blue:0.98, alpha:1.0)
-        button.titleLabel?.font = UIFont(name: "AvenirNextCondensed-Bold", size: 18)
-        button.layer.cornerRadius = 10
-        return button
-    }()
-    
-    let pastBoxes: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Past Boxes", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = UIColor(red:0.44, green:0.43, blue:0.98, alpha:1.0)
-        button.titleLabel?.font = UIFont(name: "AvenirNextCondensed-Bold", size: 18)
-        button.layer.cornerRadius = 10
-        return button
-    }()
-    
-    let profileBox: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Profile", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = UIColor(red:0.44, green:0.43, blue:0.98, alpha:1.0)
-        button.titleLabel?.font = UIFont(name: "AvenirNextCondensed-Bold", size: 18)
-        button.layer.cornerRadius = 10
-        return button
-    }()
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         setViews()
+        setupCollectionView()
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
     
     func setViews(){
         self.view.backgroundColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1.0)
         setNavigation()
-        setStackView()
+        setupCollectionView()
     }
     
     func setNavigation(){
@@ -75,35 +49,24 @@ class HomeViewController: UIViewController{
         self.navigationItem.setHidesBackButton(true, animated: false)
     }
     
-    func setStackView(){
-        
-        self.view.addSubview(stackView)
-        
-        stackView.widthAnchor.constraint(equalTo: self.view.layoutMarginsGuide.widthAnchor, multiplier: 0.65).isActive = true
-        stackView.heightAnchor.constraint(equalTo: self.view.layoutMarginsGuide.heightAnchor, multiplier: 0.75).isActive = true
-        stackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        stackView.centerYAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.centerYAnchor).isActive = true
-        
-        
-        stackView.addArrangedSubview(newBox)
-        
-        newBox.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
-        
-        
-        stackView.addArrangedSubview(pastBoxes)
-        
-        pastBoxes.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
-        
-        
-        stackView.addArrangedSubview(profileBox)
-        
-        profileBox.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
-        
-        newBox.addTarget(self, action: #selector(newBoxButtonTapped), for: .touchUpInside)
-        
-        pastBoxes.addTarget(self, action: #selector(pastBoxesButtonTapped), for: .touchUpInside)
-        
+    func setupCollectionView(){
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: collectionViewLayout)
+        collectionView.backgroundColor = UIColor.white
+        collectionView.register(CustomCell.self, forCellWithReuseIdentifier: "CustomCell")
+        collectionView.register(TitleCell.self, forCellWithReuseIdentifier: "TitleCell")
+        self.view.addSubview(collectionView)
+        collectionView.reloadData()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        collectionView.reloadData()
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        collectionView.reloadData()
+    }
+
     
     @objc func newBoxButtonTapped(){
         let newBoxVC: NewBoxViewController = NewBoxViewController()
@@ -116,4 +79,19 @@ class HomeViewController: UIViewController{
         self.navigationController?.pushViewController(pastBoxesVC, animated: true)
     }
     
+}
+
+
+extension HomeViewController: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        sections.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        sections[section].numberOfItems
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        sections[indexPath.section].configureCell(collectionView: collectionView, indexPath: indexPath)
+    }
 }

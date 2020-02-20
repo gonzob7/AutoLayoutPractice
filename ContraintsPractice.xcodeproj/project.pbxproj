@@ -13,6 +13,8 @@
 		E0000BC423FF39F800283791 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000BC323FF39F800283791 /* ProfileViewController.swift */; };
 		E0000BC723FF3CA700283791 /* FeaturedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000BC623FF3CA700283791 /* FeaturedSection.swift */; };
 		E0000BC923FF3CDA00283791 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000BC823FF3CDA00283791 /* Section.swift */; };
+		E0000BCB23FF3DBA00283791 /* TitleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000BCA23FF3DBA00283791 /* TitleSection.swift */; };
+		E0000BCD23FF3DFB00283791 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000BCC23FF3DFB00283791 /* TitleCell.swift */; };
 		E069569C23D776BF0001F903 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E069569B23D776BF0001F903 /* AppDelegate.swift */; };
 		E069569E23D776BF0001F903 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E069569D23D776BF0001F903 /* SceneDelegate.swift */; };
 		E06956A623D776BF0001F903 /* ContraintsPractice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E06956A423D776BF0001F903 /* ContraintsPractice.xcdatamodeld */; };
@@ -39,6 +41,8 @@
 		E0000BC323FF39F800283791 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E0000BC623FF3CA700283791 /* FeaturedSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedSection.swift; sourceTree = "<group>"; };
 		E0000BC823FF3CDA00283791 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		E0000BCA23FF3DBA00283791 /* TitleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSection.swift; sourceTree = "<group>"; };
+		E0000BCC23FF3DFB00283791 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 		E069569823D776BF0001F903 /* ContraintsPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContraintsPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E069569B23D776BF0001F903 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E069569D23D776BF0001F903 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 			children = (
 				E0000BC623FF3CA700283791 /* FeaturedSection.swift */,
 				E0000BC823FF3CDA00283791 /* Section.swift */,
+				E0000BCA23FF3DBA00283791 /* TitleSection.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 				E0CA772223E35D0500AE4955 /* CustomView.swift */,
 				E074BF4923FB86A700334F8F /* CustomCell.swift */,
 				E074BF4F23FC715300334F8F /* CustomPastBoxCell.swift */,
+				E0000BCC23FF3DFB00283791 /* TitleCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -269,9 +275,11 @@
 				E074BF4A23FB86A700334F8F /* CustomCell.swift in Sources */,
 				E0CA772123E0BBEF00AE4955 /* OnboardingViewController.swift in Sources */,
 				E0000BC423FF39F800283791 /* ProfileViewController.swift in Sources */,
+				E0000BCB23FF3DBA00283791 /* TitleSection.swift in Sources */,
 				E074BF4823FB6B9900334F8F /* NewBoxViewController.swift in Sources */,
 				E0000BC923FF3CDA00283791 /* Section.swift in Sources */,
 				E074BF4623FB519300334F8F /* HomeViewController.swift in Sources */,
+				E0000BCD23FF3DFB00283791 /* TitleCell.swift in Sources */,
 				E0CA772323E35D0500AE4955 /* CustomView.swift in Sources */,
 				E074BF5023FC715300334F8F /* CustomPastBoxCell.swift in Sources */,
 				E074BF4223F51CD900334F8F /* UINavigationController+extensions.swift in Sources */,
