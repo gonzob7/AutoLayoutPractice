@@ -144,8 +144,8 @@ class LoginViewController: UIViewController{
     
     @objc func loginButtonTapped(){
         print("logged in")
-        let homeVC: HomeViewController = HomeViewController()
-        self.navigationController?.pushViewController(homeVC, animated: true)
+        let tabBarVC: TabBarController = TabBarController()
+        self.navigationController?.pushViewController(tabBarVC, animated: true)
     }
     
     

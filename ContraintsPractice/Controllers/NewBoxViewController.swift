@@ -40,6 +40,8 @@ class NewBoxViewController: UIViewController{
     }
     
     
+    
+    
     func setViews(){
         self.view.backgroundColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1.0)
         self.view.addSubview(collectionView)
@@ -49,6 +51,11 @@ class NewBoxViewController: UIViewController{
         collectionView.centerYAnchor.constraint(equalTo: self.view.layoutMarginsGuide.centerYAnchor).isActive = true
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.title = "New Box"
     
         
     }
