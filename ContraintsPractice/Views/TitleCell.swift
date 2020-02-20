@@ -13,14 +13,22 @@ class TitleCell: UICollectionViewCell {
     let titleLabel: UILabel = {
         let title = UILabel()
         title.translatesAutoresizingMaskIntoConstraints = false
-        title.textColor = .white
+        title.textColor = .black
         title.font = UIFont(name: "AvenirNext-Bold", size: 20)
         return title
     }()
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
-        contentView.addSubview(titleLabel)
+        
+        
+        self.addSubview(titleLabel)
+        
+        titleLabel.topAnchor.constraint(equalTo:  contentView.topAnchor).isActive = true
+        titleLabel.bottomAnchor.constraint(equalTo:  contentView.bottomAnchor).isActive = true
+        titleLabel.trailingAnchor.constraint(equalTo:  contentView.trailingAnchor, constant: 20).isActive = true
+        titleLabel.leadingAnchor.constraint(equalTo:  contentView.leadingAnchor, constant: 20).isActive = true
+
     }
     
     required init?(coder: NSCoder) {
