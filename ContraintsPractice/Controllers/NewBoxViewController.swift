@@ -55,7 +55,7 @@ class NewBoxViewController: UIViewController{
         
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.title = "New Box"
+        self.title = self.tabBarItem.title
     
         
     }

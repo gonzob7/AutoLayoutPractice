@@ -66,7 +66,7 @@ class HomeViewController: UIViewController{
     func setNavigation(){
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.title = "Home"
+        self.title = self.tabBarItem.title
         self.navigationItem.setHidesBackButton(true, animated: false)
     }
     

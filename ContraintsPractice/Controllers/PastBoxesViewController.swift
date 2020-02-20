@@ -32,7 +32,7 @@ class PastBoxesViewController: UIViewController, UITableViewDelegate{
     func setUpNavBar(){
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.title = "Past Boxes"
+        self.title = self.tabBarItem.title
     }
     
     func setUpTableView(){
