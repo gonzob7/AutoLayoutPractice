@@ -11,7 +11,7 @@ import UIKit
 class PastBoxesViewController: UIViewController, UITableViewDelegate{
     
     let tableView =  UITableView()
-    let boxesArray = [Box(title: "January 202", image: UIImage(named: "box2")!)]
+    let boxesArray = [Box(title: "January 2020", image: UIImage(named: "box2")!), Box(title: "Febuary 2020", image: UIImage(named: "box2")!), Box(title: "March 2020", image: UIImage(named: "box2")!)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,6 @@ class PastBoxesViewController: UIViewController, UITableViewDelegate{
         setUpNavBar()
         setUpTableView()
         tableView.register(CustomPastBoxCell.self, forCellReuseIdentifier: "cell")
-
     }
     
     override func loadView() {
@@ -57,7 +56,6 @@ class PastBoxesViewController: UIViewController, UITableViewDelegate{
 
 extension PastBoxesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//      return characters.count
         return boxesArray.count
     }
     
