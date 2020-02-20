@@ -47,6 +47,8 @@ class CustomCell: UICollectionViewCell{
     override init(frame: CGRect) {
         super.init(frame: .zero)
         contentView.addSubview(stackView)
+        
+        
         stackView.widthAnchor.constraint(equalTo:  contentView.widthAnchor, multiplier: 0.80).isActive = true
         stackView.heightAnchor.constraint(equalTo:  contentView.heightAnchor, multiplier: 0.70).isActive = true
         stackView.centerXAnchor.constraint(equalTo:  contentView.centerXAnchor).isActive = true

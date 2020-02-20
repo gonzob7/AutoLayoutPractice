@@ -8,15 +8,18 @@
 
 import UIKit
 
-class PastBoxesViewController: UIViewController{
+class PastBoxesViewController: UIViewController, UITableViewDelegate{
     
     let tableView =  UITableView()
+    let boxesArray = [Box(title: "January 202", image: UIImage(named: "box2")!)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setViews()
         setUpNavBar()
         setUpTableView()
+        tableView.register(CustomPastBoxCell.self, forCellReuseIdentifier: "cell")
+
     }
     
     override func loadView() {
@@ -41,7 +44,9 @@ class PastBoxesViewController: UIViewController{
         tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         tableView.backgroundColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1.0)
-
+        
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     
@@ -53,13 +58,15 @@ class PastBoxesViewController: UIViewController{
 extension PastBoxesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //      return characters.count
-        return 30
+        return boxesArray.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-//      cell.textLabel?.text = characters[indexPath.row]
+      let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomPastBoxCell
+        cell.setCellContents(box: boxesArray[indexPath.row])
       return cell
     }
+    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100.0
