@@ -38,6 +38,8 @@ class CustomPastBoxCell: UITableViewCell{
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        
+        
         contentView.addSubview(stackView)
         
         stackView.widthAnchor.constraint(equalTo:  contentView.widthAnchor).isActive = true
@@ -55,7 +57,6 @@ class CustomPastBoxCell: UITableViewCell{
     func setCellContents(box: Box){
         boxImage.image = box.image
         date.text = box.title
-        
     }
     
     
