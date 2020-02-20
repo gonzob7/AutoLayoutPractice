@@ -10,6 +10,7 @@
 		0CF88AA8B9B7D1EECFABD6F2 /* Pods_ContraintsPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B5B7908C761ADDD98D6670 /* Pods_ContraintsPractice.framework */; };
 		E0000BC023FF1E9000283791 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000BBF23FF1E9000283791 /* Box.swift */; };
 		E0000BC223FF29CE00283791 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000BC123FF29CE00283791 /* TabBarController.swift */; };
+		E0000BC423FF39F800283791 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000BC323FF39F800283791 /* ProfileViewController.swift */; };
 		E069569C23D776BF0001F903 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E069569B23D776BF0001F903 /* AppDelegate.swift */; };
 		E069569E23D776BF0001F903 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E069569D23D776BF0001F903 /* SceneDelegate.swift */; };
 		E06956A623D776BF0001F903 /* ContraintsPractice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E06956A423D776BF0001F903 /* ContraintsPractice.xcdatamodeld */; };
@@ -33,6 +34,7 @@
 		B9B5B7908C761ADDD98D6670 /* Pods_ContraintsPractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContraintsPractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0000BBF23FF1E9000283791 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		E0000BC123FF29CE00283791 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		E0000BC323FF39F800283791 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E069569823D776BF0001F903 /* ContraintsPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContraintsPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E069569B23D776BF0001F903 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E069569D23D776BF0001F903 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				E074BF4723FB6B9900334F8F /* NewBoxViewController.swift */,
 				E074BF4D23FC682400334F8F /* PastBoxesViewController.swift */,
 				E0000BC123FF29CE00283791 /* TabBarController.swift */,
+				E0000BC323FF39F800283791 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				E0000BC223FF29CE00283791 /* TabBarController.swift in Sources */,
 				E074BF4A23FB86A700334F8F /* CustomCell.swift in Sources */,
 				E0CA772123E0BBEF00AE4955 /* OnboardingViewController.swift in Sources */,
+				E0000BC423FF39F800283791 /* ProfileViewController.swift in Sources */,
 				E074BF4823FB6B9900334F8F /* NewBoxViewController.swift in Sources */,
 				E074BF4623FB519300334F8F /* HomeViewController.swift in Sources */,
 				E0CA772323E35D0500AE4955 /* CustomView.swift in Sources */,

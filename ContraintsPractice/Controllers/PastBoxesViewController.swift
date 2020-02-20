@@ -48,9 +48,6 @@ class PastBoxesViewController: UIViewController, UITableViewDelegate{
         tableView.dataSource = self
     }
     
-    
-
-    
 }
 
 

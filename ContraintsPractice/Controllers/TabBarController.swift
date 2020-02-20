@@ -16,7 +16,6 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
         self.delegate = self
         self.tabBar.tintColor = UIColor(red:0.44, green:0.43, blue:0.98, alpha:1.0)
 
-
     }
     
     func setupViewControllers(){
@@ -35,7 +34,12 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
         let navController3 = UINavigationController(rootViewController:pastBoxesVC)
         pastBoxesVC.tabBarItem = UITabBarItem(title: "History", image: UIImage(named: "tab-history"), tag: 2)
         
-        viewControllers = [navController, navController2, navController3]
+        let profileVC = ProfileViewController()
+        let navController4 = UINavigationController(rootViewController:profileVC)
+        profileVC.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "tab-profile"), tag: 3)
+
+        
+        viewControllers = [navController, navController2, navController3, navController4]
     
     }
     
