@@ -10,6 +10,11 @@ import UIKit
 
 class HomeViewController: UIViewController{
     
+    
+    var collectionView: UICollectionView!
+
+    
+    
     let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
