@@ -10,15 +10,14 @@ import UIKit
 
 class HomeViewController: UIViewController, UICollectionViewDelegate{
     
-    
 
-    
     var collectionView: UICollectionView!
     
     lazy var sections: [Section] = [
         TitleSection(headerTitle: "Featured Categories"),
         FeaturedSection(),
-        TitleSection(headerTitle: "Last months favorites")
+        TitleSection(headerTitle: "Last months favorites"),
+        FavoritesSection()
     ]
     
     lazy var collectionViewLayout: UICollectionViewLayout = {
@@ -32,7 +31,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate{
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setViews()
         setupCollectionView()
         collectionView.delegate = self
@@ -58,6 +56,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate{
         collectionView.backgroundColor = UIColor.white
         collectionView.register(CustomCell.self, forCellWithReuseIdentifier: "CustomCell")
         collectionView.register(TitleCell.self, forCellWithReuseIdentifier: "TitleCell")
+        collectionView.register(FavoritesCell.self, forCellWithReuseIdentifier: "FavoritesCell")
 
 
         
@@ -68,7 +67,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate{
         collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
         collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
-                
+        
         collectionView.reloadData()
         
         
@@ -109,13 +108,6 @@ extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         sections[indexPath.section].configureCell(collectionView: collectionView, indexPath: indexPath)
-        
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
-//        cell.backgroundColor = UIColor(red:0.59, green:0.59, blue:0.59, alpha:1.0)
-//        cell.layer.cornerRadius = 10
-//        cell.data = self.data[indexPath.row]
-//        return cell
-    
         
     }
     

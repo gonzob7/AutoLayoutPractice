@@ -8,9 +8,6 @@
 
 import UIKit
 
-
-import UIKit
-
 struct FeaturedSection: Section {
     
     
@@ -26,22 +23,24 @@ struct FeaturedSection: Section {
     ]
     
     let numberOfItems = 8
+    
     func layoutSection() -> NSCollectionLayoutSection? {
         // TODO: Step 1
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.75), heightDimension: .fractionalHeight(0.75))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.95), heightDimension: .fractionalHeight(0.80))
         
         // TODO: Step 2
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         // TODO:Step 3: Try using the absolute values, around 200 by 300
-        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(220), heightDimension: .absolute(315))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(200), heightDimension: .absolute(300))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        
         
         // TODO: Step 5
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .continuous
-        
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
         return section
     }
     
@@ -54,8 +53,7 @@ struct FeaturedSection: Section {
         cell.layer.cornerRadius = 10
         cell.data = self.data[indexPath.row]
         return cell
+        
     }
-    
-    
     
 }

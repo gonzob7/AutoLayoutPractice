@@ -40,7 +40,8 @@ struct TitleSection: Section {
         
         // TODO: Step 5
         let section = NSCollectionLayoutSection(group: group)
-        
+
+
         return section
     }
     
