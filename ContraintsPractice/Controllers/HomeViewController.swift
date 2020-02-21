@@ -110,7 +110,15 @@ extension HomeViewController: UICollectionViewDataSource {
         sections[indexPath.section].configureCell(collectionView: collectionView, indexPath: indexPath)
         
     }
-    
-    
 
 }
+
+//extension HomeViewController: UICollectionViewDelegateFlowLayout{
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+//        return CGSize(width: self.view.frame.width, height: 5.0)
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        UIEdgeInsets.zero
+//    }
+//}

@@ -15,8 +15,7 @@ class CustomView: UIView {
     var image: UIImage!
     var headerText: String!
     var bodyText: String!
-//    var continueButton: UIButton!
-    
+
     
     let stackView: UIStackView = {
         let stackView = UIStackView()
