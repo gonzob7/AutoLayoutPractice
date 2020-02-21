@@ -12,10 +12,9 @@ import UIKit
 import UIKit
 
 struct FeaturedSection: Section {
-    let numberOfItems = 6
+    
     
     let data = [
-        
         Cell(title: "Treats", image: UIImage(named: "treat")!),
         Cell(title: "Toys", image: UIImage(named: "toy")!),
         Cell(title: "Food", image: UIImage(named: "food")!),
@@ -24,9 +23,9 @@ struct FeaturedSection: Section {
         Cell(title: "Vaccines", image: UIImage(named: "vaccines")!),
         Cell(title: "Accessories", image: UIImage(named: "accessories")!),
         Cell(title: "Housing", image: UIImage(named: "housing")!)
-    
     ]
     
+    let numberOfItems = 8
     func layoutSection() -> NSCollectionLayoutSection? {
         // TODO: Step 1
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.75), heightDimension: .fractionalHeight(0.75))
