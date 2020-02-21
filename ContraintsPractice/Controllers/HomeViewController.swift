@@ -58,7 +58,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate{
         collectionView.register(TitleCell.self, forCellWithReuseIdentifier: "TitleCell")
         collectionView.register(FavoritesCell.self, forCellWithReuseIdentifier: "FavoritesCell")
 
-
         
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -81,18 +80,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate{
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         collectionView.reloadData()
     }
-
-    
-    @objc func newBoxButtonTapped(){
-        let newBoxVC: NewBoxViewController = NewBoxViewController()
-        self.navigationController?.pushViewController(newBoxVC, animated: true)
-    }
-    
-    
-    @objc func pastBoxesButtonTapped(){
-        let pastBoxesVC: PastBoxesViewController = PastBoxesViewController()
-        self.navigationController?.pushViewController(pastBoxesVC, animated: true)
-    }
     
 }
 
@@ -110,8 +97,8 @@ extension HomeViewController: UICollectionViewDataSource {
         sections[indexPath.section].configureCell(collectionView: collectionView, indexPath: indexPath)
         
     }
-
 }
+
 
 //extension HomeViewController: UICollectionViewDelegateFlowLayout{
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {

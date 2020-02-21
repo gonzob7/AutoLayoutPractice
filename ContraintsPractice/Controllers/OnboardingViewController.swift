@@ -112,8 +112,4 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate{
          scrollView.contentOffset.y = 0 //disable vertical scrolling
         }
     }
-    
-
-    
-
 }
