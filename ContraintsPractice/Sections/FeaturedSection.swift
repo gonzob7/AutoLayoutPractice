@@ -14,6 +14,19 @@ import UIKit
 struct FeaturedSection: Section {
     let numberOfItems = 6
     
+    let data = [
+        
+        Cell(title: "Treats", image: UIImage(named: "treat")!),
+        Cell(title: "Toys", image: UIImage(named: "toy")!),
+        Cell(title: "Food", image: UIImage(named: "food")!),
+        Cell(title: "Grooming", image: UIImage(named: "grooming")!),
+        Cell(title: "Lifestyle", image: UIImage(named: "lifestyle")!),
+        Cell(title: "Vaccines", image: UIImage(named: "vaccines")!),
+        Cell(title: "Accessories", image: UIImage(named: "accessories")!),
+        Cell(title: "Housing", image: UIImage(named: "housing")!)
+    
+    ]
+    
     func layoutSection() -> NSCollectionLayoutSection? {
         // TODO: Step 1
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
@@ -35,6 +48,12 @@ struct FeaturedSection: Section {
     
     func configureCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
         collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: CustomCell.self), for: indexPath)
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
+        cell.backgroundColor = UIColor(red:0.59, green:0.59, blue:0.59, alpha:1.0)
+        cell.layer.cornerRadius = 10
+        cell.data = self.data[indexPath.row]
+        return cell
     }
     
     
