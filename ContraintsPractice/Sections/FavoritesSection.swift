@@ -28,14 +28,14 @@ struct FavoritesSection: Section {
         // TODO: Step 5
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .groupPaging
-        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 0)
         return section
     }
     
     func configureCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: FavoritesCell.self), for: indexPath) as! FavoritesCell
         //TODO: set the cell's title
-        cell.set(image: "box2", name: "Title Label", type: "Typeee")
+        cell.set(image: "box2", name: "Title of item", type: "Type of item")
         return cell
         
         
