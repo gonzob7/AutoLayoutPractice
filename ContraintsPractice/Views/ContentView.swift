@@ -45,6 +45,7 @@ struct ContentView: View {
                 
                 Button(action: {
                     print("Signout tapped")
+//                    NavigationLink(destination: LoginViewController())
                 }) {
                     HStack {
                         Image(systemName: "heart.fill")
