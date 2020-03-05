@@ -40,21 +40,37 @@ struct ContentView: View {
                     }
                 }
                 .padding()
-
+                
                 Spacer()
-            }
+                
+                Button(action: {
+                    print("Signout tapped")
+                }) {
+                    HStack {
+                        Image(systemName: "heart.fill")
+                            .font(.title)
+                        Text("Sign Out")
+                            .fontWeight(.semibold)
+                            .font(.title)
+                    }
+                .frame(minWidth: 100, maxWidth: 300)
+                .foregroundColor(Color.white)
+                .padding()
+                .background(LinearGradient(gradient: Gradient(colors: [Color(red: 112 / 255, green: 110 / 255, blue: 255 / 255), Color(red: 229 / 255, green: 57 / 255, blue: 53 / 255)]), startPoint: .leading, endPoint: .trailing))
+                .cornerRadius(40)
+                    
+                
+                }
+                    Spacer()
+                    .frame(height: 50)
             
         .navigationBarTitle("Profile")
-        .navigationBarHidden(false)
-
             
         }
         
-        
-        
     }
 }
-
+}
 
 
 
