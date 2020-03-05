@@ -83,15 +83,6 @@ extension PastBoxesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        cell.alpha = 0
-
-//        UIView.animate(
-//            withDuration: 0.5,
-//            delay: 0.05 * Double(indexPath.row),
-//            animations: {
-//                cell.alpha = 1
-//        })
-        
         if animated <= (boxesArray.count-1) && !isAnimationLocked{
             cell.transform = CGAffineTransform(translationX: tableView.bounds.width, y: 0)
 
@@ -102,8 +93,6 @@ extension PastBoxesViewController: UITableViewDataSource {
             })
             animated += 1
         }
-        
-        
         
     }
     

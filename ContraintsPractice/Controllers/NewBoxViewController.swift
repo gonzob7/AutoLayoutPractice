@@ -10,6 +10,21 @@ import UIKit
 
 class NewBoxViewController: UIViewController{
     
+    var selectedIndexPath: IndexPath? {
+        didSet {
+            var indexPaths: [IndexPath] = []
+            if let selectedIndexPath = selectedIndexPath {
+                indexPaths.append(selectedIndexPath)
+            }
+            if let oldValue = oldValue {
+                indexPaths.append(oldValue)
+            }
+            collectionView.performBatchUpdates({
+                self.collectionView.reloadItems(at: indexPaths)
+            })
+        }
+    }
+    
     let data = [
         
         Cell(title: "Treats", image: UIImage(named: "treat")!),
@@ -75,25 +90,35 @@ extension NewBoxViewController: UICollectionViewDelegateFlowLayout, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CustomCell
-        cell.backgroundColor = UIColor(red:0.59, green:0.59, blue:0.59, alpha:1.0)
+        if indexPath == selectedIndexPath{
+            cell.backgroundColor = UIColor(red:0.44, green:0.43, blue:0.98, alpha:1.0)
+        }else{
+            cell.backgroundColor = UIColor(red:0.59, green:0.59, blue:0.59, alpha:1.0)
+        }
+        
         cell.layer.cornerRadius = 10
         cell.data = self.data[indexPath.row]
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        if selectedIndexPath == indexPath {
+          selectedIndexPath = nil
+        } else {
+          selectedIndexPath = indexPath
+        }
+          return false
+    }
+
+    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? CustomCell {
-            
-
-            
             if cell.backgroundColor == UIColor(red:0.59, green:0.59, blue:0.59, alpha:1.0){
-                cell.backgroundColor = UIColor(red:0.44, green:0.43, blue:0.98, alpha:1.0)
 
             }else{
-                cell.backgroundColor = UIColor(red:0.59, green:0.59, blue:0.59, alpha:1.0)
+
             }
-            
 
         }
         
