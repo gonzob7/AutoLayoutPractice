@@ -101,6 +101,7 @@ class LoginViewController: UIViewController{
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         setViews()
+        runAnimations()
     }
     
     func setViews(){
@@ -142,12 +143,24 @@ class LoginViewController: UIViewController{
         
     }
     
+    func runAnimations(){
+        self.box.shake()
+    }
+    
     
     @objc func loginButtonTapped(){
         print("logged in")
         let tabBarVC: TabBarController = TabBarController()
         self.navigationController?.pushViewController(tabBarVC, animated: true)
     }
-    
-    
+}
+
+extension UIView {
+    func shake() {
+        let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
+        animation.duration = 1.25
+        animation.values = [-20.0, 20.0, -20.0, 20.0, -10.0, 10.0, -5.0, 5.0, 0.0]
+        layer.add(animation, forKey: "shake")
+    }
 }

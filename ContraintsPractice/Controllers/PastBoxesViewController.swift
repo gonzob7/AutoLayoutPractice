@@ -96,10 +96,8 @@ extension PastBoxesViewController: UITableViewDataSource {
             cell.transform = CGAffineTransform(translationX: tableView.bounds.width, y: 0)
 
             UIView.animate(
-                withDuration: 0.35,
-                delay: 0.25 * Double(indexPath.row),
-                options: [.curveEaseInOut],
-                animations: {
+                withDuration: 0.35, delay: 0.25 * Double(indexPath.row), options: [.curveEaseInOut],
+            animations: {
                     cell.transform = CGAffineTransform(translationX: 0, y: 0)
             })
             animated += 1
