@@ -11,6 +11,8 @@ import UIKit
 class PastBoxesViewController: UIViewController, UITableViewDelegate{
     
     let tableView =  UITableView()
+    var animated: Int = 0
+    var isAnimationLocked: Bool = false
     
     let boxesArray = [Box(title: "March 2020", image: UIImage(named: "box2")!), Box(title: "Febuary 2020", image: UIImage(named: "box2")!), Box(title: "January 2020", image: UIImage(named: "box2")!), Box(title: "December 2019", image: UIImage(named: "box2")!), Box(title: "November 2019", image: UIImage(named: "box2")!), Box(title: "October 2019", image: UIImage(named: "box2")!), Box(title: "September 2019", image: UIImage(named: "box2")!)]
     
@@ -23,7 +25,12 @@ class PastBoxesViewController: UIViewController, UITableViewDelegate{
     }
     
     override func loadView() {
-      super.loadView()
+        super.loadView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.animated = 0
+        tableView.reloadData()
     }
     
     func setViews(){
@@ -31,7 +38,6 @@ class PastBoxesViewController: UIViewController, UITableViewDelegate{
     }
     
     func setUpNavBar(){
-        self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.title = self.tabBarItem.title
     }
@@ -43,7 +49,7 @@ class PastBoxesViewController: UIViewController, UITableViewDelegate{
         tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        tableView.backgroundColor = UIColor(red:1.0, green:1.0, blue:0.95, alpha:1.0)
+        tableView.backgroundColor = UIColor(red:1.0, green:1.0, blue:1.0, alpha:1.0)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -73,5 +79,34 @@ extension PastBoxesViewController: UITableViewDataSource {
         let detail: BoxDetailsViewController = BoxDetailsViewController()
         detail.boxMonth = self.boxesArray[indexPath.row].title + " Box"
         self.navigationController?.pushViewController(detail, animated: true)
+        self.isAnimationLocked = true
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        cell.alpha = 0
+
+//        UIView.animate(
+//            withDuration: 0.5,
+//            delay: 0.05 * Double(indexPath.row),
+//            animations: {
+//                cell.alpha = 1
+//        })
+        
+        if animated <= (boxesArray.count-1) && !isAnimationLocked{
+            cell.transform = CGAffineTransform(translationX: tableView.bounds.width, y: 0)
+
+            UIView.animate(
+                withDuration: 0.35,
+                delay: 0.25 * Double(indexPath.row),
+                options: [.curveEaseInOut],
+                animations: {
+                    cell.transform = CGAffineTransform(translationX: 0, y: 0)
+            })
+            animated += 1
+        }
+        
+        
+        
+    }
+    
 }

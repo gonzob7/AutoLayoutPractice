@@ -11,6 +11,8 @@ import SwiftUI
 
 class TabBarController: UITabBarController, UITabBarControllerDelegate{
     
+    
+    
     var firstItemImageView: UIImageView!
     var secondItemImageView: UIImageView!
     var thirdItemImageView: UIImageView!
@@ -39,6 +41,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
         newBoxVC.tabBarItem = UITabBarItem(title: "New", image: UIImage(named: "tab-box"), tag: 1)
         
         let pastBoxesVC = PastBoxesViewController()
+        pastBoxesVC.isAnimationLocked = false
         let navController3 = UINavigationController(rootViewController:pastBoxesVC)
         pastBoxesVC.tabBarItem = UITabBarItem(title: "History", image: UIImage(named: "tab-history"), tag: 2)
         
@@ -46,8 +49,6 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
         let profileVC = ContentView()
         let navController4 = UIHostingController(rootView: profileVC)
         navController4.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "tab-profile"), tag: 3)
-//        navController4.navigationController?.navigationBar.isHidden = false
-//        navController4.navigationController?.title = self.tabBarItem.title
         viewControllers = [navController, navController2, navController3, navController4]
     
     }
@@ -73,9 +74,9 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
     }
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        print("Selected a new view controller")
-
+//        setupViewControllers()
     }
+    
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         if item.tag == 0{
@@ -89,15 +90,19 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
                 self.secondItemImageView.transform = .identity
             }, completion: nil)
         }else if item.tag == 2{
+            
             thirdItemImageView.transform = CGAffineTransform(scaleX: 0.3, y: 0.3)
             UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
                 self.thirdItemImageView.transform = .identity
             }, completion: nil)
+            
         }else if item.tag == 3{
             fourthItemImageView.transform = CGAffineTransform(scaleX: 0.3, y: 0.3)
             UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
                 self.fourthItemImageView.transform = .identity
             }, completion: nil)
+            
+            
         }
     }
 }
