@@ -67,4 +67,10 @@ extension PastBoxesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100.0
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detail: BoxDetailsViewController = BoxDetailsViewController()
+        detail.boxMonth = self.boxesArray[indexPath.row].title + " Box"
+        self.navigationController?.pushViewController(detail, animated: true)
+    }
 }
