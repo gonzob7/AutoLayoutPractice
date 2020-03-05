@@ -35,6 +35,8 @@
 		E0CA772323E35D0500AE4955 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CA772223E35D0500AE4955 /* CustomView.swift */; };
 		E0E93203241075CC00594915 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E93202241075CC00594915 /* ContentView.swift */; };
 		E0E9320524108C4C00594915 /* BoxItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E9320424108C4C00594915 /* BoxItem.swift */; };
+		E0E9320724108CCE00594915 /* CustomPastBoxDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E9320624108CCE00594915 /* CustomPastBoxDetailCell.swift */; };
+		E0E932092410910E00594915 /* BoxDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E932082410910E00594915 /* BoxDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,8 @@
 		E0CA772223E35D0500AE4955 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		E0E93202241075CC00594915 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E0E9320424108C4C00594915 /* BoxItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxItem.swift; sourceTree = "<group>"; };
+		E0E9320624108CCE00594915 /* CustomPastBoxDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPastBoxDetailCell.swift; sourceTree = "<group>"; };
+		E0E932082410910E00594915 /* BoxDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,9 +170,10 @@
 				E074BF4323FB305500334F8F /* LoginViewController.swift */,
 				E074BF4523FB519200334F8F /* HomeViewController.swift */,
 				E074BF4723FB6B9900334F8F /* NewBoxViewController.swift */,
-				E074BF4D23FC682400334F8F /* PastBoxesViewController.swift */,
 				E0000BC123FF29CE00283791 /* TabBarController.swift */,
 				E0000BC323FF39F800283791 /* ProfileViewController.swift */,
+				E074BF4D23FC682400334F8F /* PastBoxesViewController.swift */,
+				E0E932082410910E00594915 /* BoxDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 				E0000BCC23FF3DFB00283791 /* TitleCell.swift */,
 				E0000BD023FF6A8E00283791 /* FavoritesCell.swift */,
 				E0E93202241075CC00594915 /* ContentView.swift */,
+				E0E9320624108CCE00594915 /* CustomPastBoxDetailCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -297,12 +303,14 @@
 				E074BF4823FB6B9900334F8F /* NewBoxViewController.swift in Sources */,
 				E0000BC923FF3CDA00283791 /* Section.swift in Sources */,
 				E074BF4623FB519300334F8F /* HomeViewController.swift in Sources */,
+				E0E932092410910E00594915 /* BoxDetailsViewController.swift in Sources */,
 				E0E9320524108C4C00594915 /* BoxItem.swift in Sources */,
 				E0000BCD23FF3DFB00283791 /* TitleCell.swift in Sources */,
 				E0CA772323E35D0500AE4955 /* CustomView.swift in Sources */,
 				E074BF5023FC715300334F8F /* CustomPastBoxCell.swift in Sources */,
 				E074BF4223F51CD900334F8F /* UINavigationController+extensions.swift in Sources */,
 				E074BF4E23FC682400334F8F /* PastBoxesViewController.swift in Sources */,
+				E0E9320724108CCE00594915 /* CustomPastBoxDetailCell.swift in Sources */,
 				E074BF4C23FB937600334F8F /* Cell.swift in Sources */,
 				E069569E23D776BF0001F903 /* SceneDelegate.swift in Sources */,
 				E06956A623D776BF0001F903 /* ContraintsPractice.xcdatamodeld in Sources */,
