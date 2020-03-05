@@ -13,31 +13,45 @@ import MapKit
 
 struct ContentView: View {
     var body: some View {
+        
+        
+        NavigationView{
             
-        VStack {
-            MapView()
-                .edgesIgnoringSafeArea(.top)
-                .frame(height: 300)
+            VStack {
+                
+                
+                MapView()
+                    .edgesIgnoringSafeArea(.top)
+                    .frame(height: 150)
 
-            CircleImage()
-                .offset(y: -130)
-                .padding(.bottom, -130)
+                CircleImage()
+                    .offset(y: -130)
+                    .padding(.bottom, -130)
 
-            VStack(alignment: .leading) {
-                Text("Bill Gates")
-                    .font(.title)
-                HStack(alignment: .top) {
-                    Text("Founder of Microsoft")
-                        .font(.subheadline)
-                    Spacer()
-                    Text("Seattle")
-                        .font(.subheadline)
+                VStack(alignment: .leading) {
+                    Text("Bill Gates")
+                        .font(.title)
+                    HStack(alignment: .top) {
+                        Text("Founder of Microsoft")
+                            .font(.subheadline)
+                        Spacer()
+                        Text("Seattle")
+                            .font(.subheadline)
+                    }
                 }
-            }
-            .padding()
+                .padding()
 
-            Spacer()
+                Spacer()
+            }
+            
+        .navigationBarTitle("Profile")
+        .navigationBarHidden(false)
+
+            
         }
+        
+        
+        
     }
 }
 
@@ -89,7 +103,5 @@ struct CircleImage_Preview: PreviewProvider {
         CircleImage()
     }
 }
-
-
 
 

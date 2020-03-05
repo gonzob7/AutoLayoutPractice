@@ -46,9 +46,8 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
         let profileVC = ContentView()
         let navController4 = UIHostingController(rootView: profileVC)
         navController4.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "tab-profile"), tag: 3)
-        //        profileVC.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "tab-profile"), tag: 3)
-        
-        
+//        navController4.navigationController?.navigationBar.isHidden = false
+//        navController4.navigationController?.title = self.tabBarItem.title
         viewControllers = [navController, navController2, navController3, navController4]
     
     }
