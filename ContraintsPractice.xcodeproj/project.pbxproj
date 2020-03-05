@@ -33,6 +33,7 @@
 		E074BF5023FC715300334F8F /* CustomPastBoxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E074BF4F23FC715300334F8F /* CustomPastBoxCell.swift */; };
 		E0CA772123E0BBEF00AE4955 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CA772023E0BBEF00AE4955 /* OnboardingViewController.swift */; };
 		E0CA772323E35D0500AE4955 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CA772223E35D0500AE4955 /* CustomView.swift */; };
+		E0E93203241075CC00594915 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E93202241075CC00594915 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		E074BF4F23FC715300334F8F /* CustomPastBoxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPastBoxCell.swift; sourceTree = "<group>"; };
 		E0CA772023E0BBEF00AE4955 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		E0CA772223E35D0500AE4955 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		E0E93202241075CC00594915 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 				E074BF4F23FC715300334F8F /* CustomPastBoxCell.swift */,
 				E0000BCC23FF3DFB00283791 /* TitleCell.swift */,
 				E0000BD023FF6A8E00283791 /* FavoritesCell.swift */,
+				E0E93202241075CC00594915 /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			files = (
 				E0000BCF23FF691F00283791 /* FavoritesSection.swift in Sources */,
 				E074BF4423FB305500334F8F /* LoginViewController.swift in Sources */,
+				E0E93203241075CC00594915 /* ContentView.swift in Sources */,
 				E0000BC023FF1E9000283791 /* Box.swift in Sources */,
 				E0000BC723FF3CA700283791 /* FeaturedSection.swift in Sources */,
 				E069569C23D776BF0001F903 /* AppDelegate.swift in Sources */,

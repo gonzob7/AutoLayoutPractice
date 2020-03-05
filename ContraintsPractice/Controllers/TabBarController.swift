@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class TabBarController: UITabBarController, UITabBarControllerDelegate{
     
@@ -17,7 +18,6 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
         setupViewControllers()
         setupTabBarIcons()
@@ -42,10 +42,12 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
         let navController3 = UINavigationController(rootViewController:pastBoxesVC)
         pastBoxesVC.tabBarItem = UITabBarItem(title: "History", image: UIImage(named: "tab-history"), tag: 2)
         
-        let profileVC = ProfileViewController()
-        let navController4 = UINavigationController(rootViewController:profileVC)
-        profileVC.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "tab-profile"), tag: 3)
-
+        
+        let profileVC = ContentView()
+        let navController4 = UIHostingController(rootView: profileVC)
+        navController4.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "tab-profile"), tag: 3)
+        //        profileVC.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "tab-profile"), tag: 3)
+        
         
         viewControllers = [navController, navController2, navController3, navController4]
     
@@ -73,9 +75,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         print("Selected a new view controller")
-        
-        
-        
+
     }
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {

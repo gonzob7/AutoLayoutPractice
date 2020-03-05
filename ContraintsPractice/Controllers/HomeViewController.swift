@@ -68,8 +68,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate{
         collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
         
         collectionView.reloadData()
-        
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
