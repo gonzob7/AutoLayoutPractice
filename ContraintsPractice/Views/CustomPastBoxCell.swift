@@ -39,11 +39,10 @@ class CustomPastBoxCell: UITableViewCell{
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         
-        
         contentView.addSubview(stackView)
         
-        stackView.widthAnchor.constraint(equalTo:  contentView.widthAnchor).isActive = true
-        stackView.heightAnchor.constraint(equalTo:  contentView.heightAnchor).isActive = true
+        stackView.widthAnchor.constraint(equalTo:  contentView.widthAnchor, multiplier: 0.85).isActive = true
+        stackView.heightAnchor.constraint(equalTo:  contentView.heightAnchor, multiplier: 0.75).isActive = true
         stackView.centerXAnchor.constraint(equalTo:  contentView.centerXAnchor).isActive = true
         stackView.centerYAnchor.constraint(equalTo:  contentView.centerYAnchor).isActive = true
         

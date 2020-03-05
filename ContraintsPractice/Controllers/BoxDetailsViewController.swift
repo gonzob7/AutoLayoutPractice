@@ -46,7 +46,7 @@ class BoxDetailsViewController: UIViewController, UITableViewDelegate {
         tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        tableView.backgroundColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1.0)
+        tableView.backgroundColor = UIColor(red:1, green:1, blue:1, alpha:1.0)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -63,6 +63,7 @@ extension BoxDetailsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomPastBoxDetailCell
         cell.setCellContents(item: itemsArray[indexPath.row])
+        cell.selectionStyle = .none
         return cell
     }
     

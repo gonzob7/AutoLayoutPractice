@@ -11,7 +11,8 @@ import UIKit
 class PastBoxesViewController: UIViewController, UITableViewDelegate{
     
     let tableView =  UITableView()
-    let boxesArray = [Box(title: "January 2020", image: UIImage(named: "box2")!), Box(title: "Febuary 2020", image: UIImage(named: "box2")!), Box(title: "March 2020", image: UIImage(named: "box2")!)]
+    
+    let boxesArray = [Box(title: "March 2020", image: UIImage(named: "box2")!), Box(title: "Febuary 2020", image: UIImage(named: "box2")!), Box(title: "January 2020", image: UIImage(named: "box2")!), Box(title: "December 2019", image: UIImage(named: "box2")!), Box(title: "November 2019", image: UIImage(named: "box2")!), Box(title: "October 2019", image: UIImage(named: "box2")!), Box(title: "September 2019", image: UIImage(named: "box2")!)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +43,7 @@ class PastBoxesViewController: UIViewController, UITableViewDelegate{
         tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        tableView.backgroundColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1.0)
+        tableView.backgroundColor = UIColor(red:1.0, green:1.0, blue:0.95, alpha:1.0)
         
         tableView.delegate = self
         tableView.dataSource = self
