@@ -35,7 +35,7 @@ struct ContentView: View {
                         Text("Founder of Microsoft")
                             .font(.subheadline)
                         Spacer()
-                        Text("Seattle")
+                        Text("Seattle, WA")
                             .font(.subheadline)
                     }
                 }
