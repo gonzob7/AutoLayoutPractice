@@ -34,6 +34,7 @@
 		E0CA772123E0BBEF00AE4955 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CA772023E0BBEF00AE4955 /* OnboardingViewController.swift */; };
 		E0CA772323E35D0500AE4955 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CA772223E35D0500AE4955 /* CustomView.swift */; };
 		E0E93203241075CC00594915 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E93202241075CC00594915 /* ContentView.swift */; };
+		E0E9320524108C4C00594915 /* BoxItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E9320424108C4C00594915 /* BoxItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		E0CA772023E0BBEF00AE4955 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		E0CA772223E35D0500AE4955 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		E0E93202241075CC00594915 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E0E9320424108C4C00594915 /* BoxItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				E074BF4B23FB937600334F8F /* Cell.swift */,
 				E0000BBF23FF1E9000283791 /* Box.swift */,
 				E0000BD223FF6BA100283791 /* Favorite.swift */,
+				E0E9320424108C4C00594915 /* BoxItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				E074BF4823FB6B9900334F8F /* NewBoxViewController.swift in Sources */,
 				E0000BC923FF3CDA00283791 /* Section.swift in Sources */,
 				E074BF4623FB519300334F8F /* HomeViewController.swift in Sources */,
+				E0E9320524108C4C00594915 /* BoxItem.swift in Sources */,
 				E0000BCD23FF3DFB00283791 /* TitleCell.swift in Sources */,
 				E0CA772323E35D0500AE4955 /* CustomView.swift in Sources */,
 				E074BF5023FC715300334F8F /* CustomPastBoxCell.swift in Sources */,
