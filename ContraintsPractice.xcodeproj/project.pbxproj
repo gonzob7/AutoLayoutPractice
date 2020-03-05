@@ -10,7 +10,6 @@
 		0CF88AA8B9B7D1EECFABD6F2 /* Pods_ContraintsPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B5B7908C761ADDD98D6670 /* Pods_ContraintsPractice.framework */; };
 		E0000BC023FF1E9000283791 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000BBF23FF1E9000283791 /* Box.swift */; };
 		E0000BC223FF29CE00283791 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000BC123FF29CE00283791 /* TabBarController.swift */; };
-		E0000BC423FF39F800283791 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000BC323FF39F800283791 /* ProfileViewController.swift */; };
 		E0000BC723FF3CA700283791 /* FeaturedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000BC623FF3CA700283791 /* FeaturedSection.swift */; };
 		E0000BC923FF3CDA00283791 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000BC823FF3CDA00283791 /* Section.swift */; };
 		E0000BCB23FF3DBA00283791 /* TitleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000BCA23FF3DBA00283791 /* TitleSection.swift */; };
@@ -45,7 +44,6 @@
 		B9B5B7908C761ADDD98D6670 /* Pods_ContraintsPractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContraintsPractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0000BBF23FF1E9000283791 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		E0000BC123FF29CE00283791 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		E0000BC323FF39F800283791 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E0000BC623FF3CA700283791 /* FeaturedSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedSection.swift; sourceTree = "<group>"; };
 		E0000BC823FF3CDA00283791 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		E0000BCA23FF3DBA00283791 /* TitleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSection.swift; sourceTree = "<group>"; };
@@ -171,7 +169,6 @@
 				E074BF4523FB519200334F8F /* HomeViewController.swift */,
 				E074BF4723FB6B9900334F8F /* NewBoxViewController.swift */,
 				E0000BC123FF29CE00283791 /* TabBarController.swift */,
-				E0000BC323FF39F800283791 /* ProfileViewController.swift */,
 				E074BF4D23FC682400334F8F /* PastBoxesViewController.swift */,
 				E0E932082410910E00594915 /* BoxDetailsViewController.swift */,
 			);
@@ -297,7 +294,6 @@
 				E0000BC223FF29CE00283791 /* TabBarController.swift in Sources */,
 				E074BF4A23FB86A700334F8F /* CustomCell.swift in Sources */,
 				E0CA772123E0BBEF00AE4955 /* OnboardingViewController.swift in Sources */,
-				E0000BC423FF39F800283791 /* ProfileViewController.swift in Sources */,
 				E0000BCB23FF3DBA00283791 /* TitleSection.swift in Sources */,
 				E0000BD323FF6BA100283791 /* Favorite.swift in Sources */,
 				E074BF4823FB6B9900334F8F /* NewBoxViewController.swift in Sources */,
