@@ -91,6 +91,7 @@ class LoginViewController: UIViewController{
     
     let box: UIImageView = {
         let box = UIImageView(image: UIImage(named: "box"))
+        box.contentMode = .scaleAspectFit
         return box
     }()
 

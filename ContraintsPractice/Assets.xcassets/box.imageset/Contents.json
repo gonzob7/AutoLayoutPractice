@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "box.png",
+      "filename" : "homeBox.png",
       "scale" : "1x"
     },
     {

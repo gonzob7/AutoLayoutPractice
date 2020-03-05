@@ -25,6 +25,8 @@ class CustomPastBoxDetailCell: UITableViewCell{
         title.font = UIFont(name: "AvenirNext-Bold", size: 20)
         title.textColor = UIColor(red:0.29, green:0.29, blue:0.29, alpha:1.0)
         title.translatesAutoresizingMaskIntoConstraints = false
+        title.adjustsFontSizeToFitWidth = true
+
         return title
     }()
     
@@ -77,12 +79,12 @@ class CustomPastBoxDetailCell: UITableViewCell{
     @objc func favTapped(){
         if self.favoriteButton.currentImage == UIImage(named: "unfavorite"){
             
-            UIView.animate(withDuration: 0.3,
+            UIView.animate(withDuration: 0.25,
             animations: {
                 self.favoriteButton.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
             },
             completion: { _ in
-                UIView.animate(withDuration: 0.3) {
+                UIView.animate(withDuration: 0.25) {
                     self.favoriteButton.transform = CGAffineTransform.identity
                 }
             })
