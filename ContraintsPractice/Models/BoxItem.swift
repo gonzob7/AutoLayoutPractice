@@ -12,5 +12,4 @@ import UIKit
 struct BoxItem{
     var title: String
     var image: UIImage
-    var isFavorite: Bool
 }

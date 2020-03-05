@@ -13,7 +13,7 @@ class BoxDetailsViewController: UIViewController, UITableViewDelegate {
     var boxMonth: String = ""
     
     let tableView = UITableView()
-    let itemsArray = [BoxItem(title: "Item1", image: UIImage(named: "unfavorite")!, isFavorite: false), BoxItem(title: "Item2", image: UIImage(named: "unfavorite")!, isFavorite: false), BoxItem(title: "Item3", image: UIImage(named: "unfavorite")!, isFavorite: false)]
+    let itemsArray = [BoxItem(title: "Chew Bone", image: UIImage(named: "Chew Bone")!), BoxItem(title: "Free Checkup", image: UIImage(named: "Free Checkup")!), BoxItem(title: "Tennis Ball and Bone", image: UIImage(named: "Tennis Ball and Bone")!), BoxItem(title: "Dog Leash", image: UIImage(named: "Dog Leash")!)]
     
     
     override func viewDidLoad() {
@@ -61,11 +61,9 @@ extension BoxDetailsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomPastBoxDetailCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomPastBoxDetailCell
         cell.setCellContents(item: itemsArray[indexPath.row])
-        cell.accessoryType = .disclosureIndicator
-        cell.selectionStyle = .none
-      return cell
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

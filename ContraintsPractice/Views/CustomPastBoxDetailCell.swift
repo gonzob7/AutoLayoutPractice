@@ -38,6 +38,7 @@ class CustomPastBoxDetailCell: UITableViewCell{
     let favoriteButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: "unfavorite"), for: .normal)
+        button.imageView?.contentMode = .scaleAspectFit
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -50,8 +51,8 @@ class CustomPastBoxDetailCell: UITableViewCell{
         
         contentView.addSubview(stackView)
         
-        stackView.widthAnchor.constraint(equalTo:  contentView.widthAnchor).isActive = true
-        stackView.heightAnchor.constraint(equalTo:  contentView.heightAnchor).isActive = true
+        stackView.widthAnchor.constraint(equalTo:  contentView.widthAnchor, multiplier: 0.85).isActive = true
+        stackView.heightAnchor.constraint(equalTo:  contentView.heightAnchor, multiplier: 0.75).isActive = true
         stackView.centerXAnchor.constraint(equalTo:  contentView.centerXAnchor).isActive = true
         stackView.centerYAnchor.constraint(equalTo:  contentView.centerYAnchor).isActive = true
         
@@ -59,15 +60,26 @@ class CustomPastBoxDetailCell: UITableViewCell{
         itemImage.widthAnchor.constraint(equalTo: stackView.widthAnchor, multiplier: 0.25).isActive = true
         
         stackView.addArrangedSubview(title)
-        title.widthAnchor.constraint(equalTo: stackView.widthAnchor, multiplier: 0.75).isActive = true
+        title.widthAnchor.constraint(equalTo: stackView.widthAnchor, multiplier: 0.55).isActive = true
         
         stackView.addArrangedSubview(favoriteButton)
+        favoriteButton.isHidden = false
+        favoriteButton.isUserInteractionEnabled = true
+        favoriteButton.addTarget(self, action: #selector(favTapped), for: .touchDown)
         
     }
     
     func setCellContents(item: BoxItem){
         itemImage.image = item.image
         title.text = item.title
+    }
+    
+    @objc func favTapped(){
+        if self.favoriteButton.currentImage == UIImage(named: "unfavorite"){
+            self.favoriteButton.setImage(UIImage(named: "favorite"), for: .normal)
+        }else{
+            self.favoriteButton.setImage(UIImage(named: "unfavorite"), for: .normal)
+        }
     }
     
     
